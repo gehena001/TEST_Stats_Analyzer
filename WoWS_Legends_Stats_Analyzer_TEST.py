@@ -129,9 +129,22 @@ if uploaded_file:
         sel_p = st.selectbox("🎮 ゲームモードを選択", PARENT_MODES)
         c_dict = {k: v for k, v in MODE_MAP.items() if v.startswith(sel_p)}
 
-        tab_names = ["総合"] + [v.replace(sel_p, "").strip() or "その他" for v in c_dict.values()]
-        tabs = st.tabs(tab_names)
+        #tab_names = ["総合"] + [v.replace(sel_p, "").strip() or "その他" for v in c_dict.values()]
+        #tabs = st.tabs(tab_names)
 
+        tab_names = ["総合"]
+        seen = set()
+
+        for v in c_dict.values():
+            sub = v.replace(sel_p, "").strip()
+            if sub in ("", "[総合]", "総合"):
+                continue
+            if sub not in seen:          # 重複防止
+                tab_names.append(sub or "その他")
+                seen.add(sub)
+
+        tabs = st.tabs(tab_names)
+        
         for i, tab in enumerate(tabs):
             with tab:
                 target_ids = list(c_dict.keys()) if i == 0 else [list(c_dict.keys())[i-1]]
