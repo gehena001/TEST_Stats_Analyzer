@@ -82,6 +82,12 @@ st.title("🚢 WoWS Legends Stats Analyzer")
 ship_master = load_master_data()
 uploaded_file = st.file_uploader("戦績CSVをアップロード", type=["csv"])
 
+st.markdown("""
+    <span style="color: #666; font-size: 0.9rem;">
+        ※CSVファイルはローカル（Webブラウザ内）で処理され、外部に送信・保存されることはありません。
+    </span>
+""", unsafe_allow_html=True)
+
 if uploaded_file:
     try:
         df_raw = pd.read_csv(uploaded_file).replace(',', '', regex=True)
