@@ -145,7 +145,7 @@ if uploaded_file:
 
         tabs = st.tabs(tab_names)
         
-        for i, tab in enumerate(tabs):
+        #for i, tab in enumerate(tabs):
             
             #with tab:
                 #target_ids = list(c_dict.keys()) if i == 0 else [list(c_dict.keys())[i-1]]
