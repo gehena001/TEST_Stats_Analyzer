@@ -62,6 +62,15 @@ MODE_MAP = {
     20: "闘争[ソロ]", 21: "闘争[2人分隊]", 22: "闘争[3人分隊]", 27: "艦隊戦",
     28: "軍記", 29: "アーケード[ソロ]", 30: "アーケード[2人分隊]", 31: "アーケード[3人分隊]"
 }
+def get_target_ids(sel_p, mode_map):
+    """親モードから対象となるモードIDのリストを返す"""
+    if sel_p == "ランダム":
+        # ランダムだけは「総合」キーが存在する
+        return [k for k, v in mode_map.items() if v.startswith(sel_p)]
+    
+    # その他のモードは子モードをすべて合計して「総合」とする
+    return [k for k, v in mode_map.items() if v.startswith(sel_p)]
+
 TIER_ORDER = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', '★']
 
 # 変換マップ
@@ -129,36 +138,30 @@ if uploaded_file:
         sel_p = st.selectbox("🎮 ゲームモードを選択", PARENT_MODES)
         c_dict = {k: v for k, v in MODE_MAP.items() if v.startswith(sel_p)}
 
-        #tab_names = ["総合"] + [v.replace(sel_p, "").strip() or "その他" for v in c_dict.values()]
-        #tabs = st.tabs(tab_names)
-
+        # タブ名の生成（総合タブ重複防止）
         tab_names = ["総合"]
         seen = set()
-
         for v in c_dict.values():
             sub = v.replace(sel_p, "").strip()
             if sub in ("", "[総合]", "総合"):
                 continue
-            if sub not in seen:          # 重複防止
+            if sub not in seen:
                 tab_names.append(sub or "その他")
                 seen.add(sub)
 
         tabs = st.tabs(tab_names)
-        
-        #for i, tab in enumerate(tabs):
-            
-            #with tab:
-                #target_ids = list(c_dict.keys()) if i == 0 else [list(c_dict.keys())[i-1]]
-                #tab_df = user_df[s_mode_series.isin(target_ids)].copy()
+
         for i, tab in enumerate(tabs):
             with tab:
                 if i == 0:
-                    # 総合タブ = すべてのモード
-                    target_ids = list(c_dict.keys())
+                    # 【総合タブ】＝ 該当親モードの全子モードを合計
+                    target_ids = get_target_ids(sel_p, MODE_MAP)
                 else:
                     # サブタブ（ソロ、2人分隊など）
-                    sub_index = i - 1
-                    target_ids = [list(c_dict.keys())[sub_index]]
+                    sub_name = tab_names[i]   # 現在のタブ名
+                    # サブモードに完全一致するものを探す
+                    target_ids = [k for k, v in MODE_MAP.items() 
+                                 if v == f"{sel_p}{sub_name}" or v == f"{sel_p}[{sub_name}]"]
         
                 tab_df = user_df[s_mode_series.isin(target_ids)].copy()
                 cl, cm, cr = st.columns([1.2, 1, 1.3])
