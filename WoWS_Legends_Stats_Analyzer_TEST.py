@@ -146,10 +146,21 @@ if uploaded_file:
         tabs = st.tabs(tab_names)
         
         for i, tab in enumerate(tabs):
+            
+            #with tab:
+                #target_ids = list(c_dict.keys()) if i == 0 else [list(c_dict.keys())[i-1]]
+                #tab_df = user_df[s_mode_series.isin(target_ids)].copy()
+        for i, tab in enumerate(tabs):
             with tab:
-                target_ids = list(c_dict.keys()) if i == 0 else [list(c_dict.keys())[i-1]]
+                if i == 0:
+                    # 総合タブ = すべてのモード
+                    target_ids = list(c_dict.keys())
+                else:
+                    # サブタブ（ソロ、2人分隊など）
+                    sub_index = i - 1
+                    target_ids = [list(c_dict.keys())[sub_index]]
+        
                 tab_df = user_df[s_mode_series.isin(target_ids)].copy()
-
                 cl, cm, cr = st.columns([1.2, 1, 1.3])
                 with cl:
                     st.subheader("最多プレイ艦艇")
