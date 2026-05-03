@@ -1,2 +1,187 @@
 id,name,tier
+PASB008_Colorado_1945,Colorado,VI
+PBSB002_Warspite_1941,Warspite,V
+PJSC007_Aoba_1943,Aoba,V
+PASC024_Phoenix_1917,Phoenix,III
+PJSB007_Kongo_1942,Kongo,IV
+PJSC005_Furutaka_1926,Furutaka,IV
+PJSD024_Wakatake_1923,Wakatake,II
+PASC005_Omaha_1923,Omaha,IV
+PJSC502_Mikasa_1905,Mikasa,II
+PBSD107_Jervis,Jervis,VI
+PASB018_Iowa_1944,Iowa,VII
+PASC004_St_Louis_1906,St.Louis,II
+PBSC206_Devonshire,Devonshire,V
+PASB518_Massachusetts,Massachusetts,VII
+PASB034_New_Mexico_1941,New_Mexico,V
+PASB006_New_York_1934,New_York,IV
+PASC012_Pensacola_1944,Pensacola,V
+PASC006_Atlanta_1942,Atlanta,VI
+PASB004_Arkansas_1912,Arkansas,III
+PJSC035_Chikuma_1912,Chikuma,I
+PJSD017_Kamikaze_1930,Kamikaze,IV
+PJSC026_Iwaki_1944,Iwaki,III
+PBSB517_Nelson,Nelson,VI
+PBSD104_Wakeful,Wakeful,III
+PASC003_Albany_1898,Albany,I
+PJSC008_Myoko_1945,Myoko,VI
+PBSC205_Hawkins,Hawkins,III
+PBSD106_Icarus,Icarus,V
+PBSD103_Valkyrie,Valkyrie,II
+PBSD105_Acasta,Acasta,IV
+PJSC015_Tatsuta_1919,Tenryu,II
+PJSB006_Fuso_1943,Fuso,V
+PJSC505_Yahagi,Yahagi,IV
+PJSB008_Ishizuchi_1921,Ishizuchi,III
+PJSD003_Isokaze_1917,Isokaze,III
+PJSB018_Yamato_1944,Yamato,★
+PBSC107_Fiji,Fiji,VI
+PJSB509_Musashi,Musashi,VIII
+PBSB504_Agincourt,Agincourt,III
+PBSC108_Edinburgh,Edinburgh,VII
+PASB739_Georgia_W,Georgia,VII
+PJSB010_Nagato_1944,Nagato,VI
+PASB509_Missouri,Missouri,VII
+PBSB509_Marlborough,Marlborough,VIII
+PJSD706_Shinonome,Shinonome,VI
+PJSD518_Asashio,Asashio,VI
+PBSD506_Gallant,Gallant,V
+PBSC505_Exeter,Exeter,V
+PJSB518_Hyuga,Hyuga,V
+PASB508_Alabama,Alabama,VII
+PJSB528_Hyuga_W,Hyuga W,V
+PJSC009_Mogami_1935,Mogami,VII
+PJSB707_Haruna,ARP Haruna,IV
+PBSB105_Iron_Duke,Iron Duke,IV
+PBSD108_Lightning,Lightning,VII
+PASC206_Dallas,Dallas,V
+PBSB107_King_George_V,King George V,VI
+PJSD105_Mutsuki,Mutuki,IV
+PJSD510_Hayate,Hayate,VIII
+PBSD109_Jutland,Jutland,VIII
+PASD508_Kidd,Kidd,VI
+PBSB106_Queen_Elizabeth,Queen Elizabeth,V
+PBSB108_Monarch,Monarch,VII
+PASC597_Nueve_de_Julio_1951,Rio de janeiro,IV
+PJSD012_Shimakaze_1943,Shimakaze,★
+PASD510_Somers,Somres,VII
+PBSB507_Hood,Hood,VI
+PBSB557_Nelson_W,Nelson W,VI
+PASB528_AL_Iowa,AL New Jersey,VII
+PBSA518_Ark_Royal,Ark Royal,V
+PASB707_California,California,V
+PJSC510_Azumaya,Azuma,VII
+PBSC510_Plymouth,Plymouth,VII
+PBSB527_Duke_of_York,Duke of York,VI
+PASC020_Des_Moines_1948,Des_Moines,★
+PASC587_AL_Baltimore,AL Baltimore,VII
+PASB207_Connecticut,Connecticut,VI
+PASB510_Ohio,Ohio,★
+PBSB505_AL_QE,AL Queen Elizabeth,V
+PJSB516_AL_Fusou,AL Fuso,V
+PBSD508_Pirate_Le_Fantasque,Caprice,VII
+PASC503_Charleston,Charleston,II
+PBSC207_Surrey,Surrey,VI
+PJSB001_Kawachi_1912,Kawachi,III
+PASA004_Langley_1929,Langley,III
+PBSB103_Bellerophon,Bellerophon,III
+PASB208_Nebraska,Nebraska,VII
+PBSC104_Danae,Danae,III
+PBSC105_Emerald,Emerald,IV
+PASB110_Vermont,Vermont,★
+PASC518_Anchorage,Anchorage,VII
+PASC109_Buffalo,Buffalo,VIII
+PASB118_Maine,Maine,VIII
+PASC046_Marblehead_Megadeth,Rattlehead,IV
+PJSC517_Maya,Maya,VI
+PJSC209_Takahashi,Takahashi,VIII
+PJSC206_Gokase,Gokase,V
+PJSC205_Agano,Agano,IV
+PJSB963_Musashi_ARP,ARP Musashi,VIII
+PJSC012_Ibuki_1944,Ibuki,VIII
+PJSD507_Yudachi,Yudachi,VII
+PASB017_Montana_1945,Montana,★
+PASB108_Kansas,Kansas,VII
+PBSB205_Tiger,Tiger,IV
+PBSC516_London,London,V
 PBSC528_Belfast_1943,Belfast'43,VII
+PASB538_Constellation,Constellation,VII
+PASB729_Georgia,Georgia,VII
+PASC596_Indianapolis_B,Indianapolis B,VI
+PASB012_North_Carolina_1945,North_Carolina,VI
+PASD709_Black,Black,VII
+PASC707_Flint,Flint,VI
+PJSA006_Zuiho_1944,Zuiho,V
+PBSC506_Exeter_B,Exeter B,V
+PJSC717_Yellow_Dragon,Yellow Dragon,VI
+PASC519_Tulsa,Tulsa,VIII
+PASC538_Rochester,Rochester,VII
+PBSC810_Defence,Defence,★
+PASC017_Baltimore_1944,Baltimore,VII
+PASB599_Constellation_W,Constellation,VII
+PJSD708_HSF_Harekaze,kirisame,VII
+PJSC718_Suzuya_HW24,Blazing Dread,VII
+PJSC208_Shimanto,Shimanto,VII
+PBSC538_Hampshire,Hampshire,VII
+PBSC511_Plymouth_HOTROD,Perfect 10,VII
+PBSB109_Lion,Lion,VII
+PBSB508_Vanguard,Vanguard,VII
+PASD518_Benson,Benson,VI
+PASD029_Sims_1941,Sims,VI
+PBSC507_Belfast_1959,Belfast,VI
+PASB730_Wisconsin,Wisconsin,VIII
+PASB590_Montana_1945_BA_Hoshino,Montana_1945_BA,★
+PBSC110_Minotaur,Minotaur,★
+PASD014_Leader_1919,Nicholas,IV
+PBSB204_Queen_Mary,Queen Mary,IV
+PASC308_Montpelier,Montpelier,VII
+PASC014_New_Orlean_1944,New Orlans,VI
+PBSB537_Collingwood,Collingwood,VI
+PBSC608_Klingon_Fiji,I.K.S. Bortas,VI
+PBSC103_Caledon,Caledon,II
+PJSC727_Blue_Dragon,Blue Dragon,VI
+PASB209_Delaware,Delaware,VIII
+PBSC109_Neptune,Neptune,VIII
+PJSB506_Mutsu,Mutsu,V
+PBSB110_Conqueror,Conqueror,★
+PASB106_Tennessee,Tennessee,V
+PASC208_Cleveland,Cleveland,VII
+PASC510_Alaska,Alaska,★
+PBSD102_Medea,Medea,II
+PASC207_Helena,Helena,VI
+PBSD503_Campbeltown_1941,Campbeltown,II
+PASB507_West_Virginia,West Virginia,VI
+PJSB013_Amagi_1942,Amagi,VII
+PBSC106_Leander,Leander,V
+PJSC520_Yoshino,Yoshino,★
+PASC016_Worcester_1948,Worcester,★
+PASB105_Nevada,Nevada,IV
+PJSB529_Iwami,Iwami,VIII
+PBSD110_Daring,Daring,★
+PASB506_Arizona_1941,Arizona,VI
+PASC045_Marblehead_1924_clone,Marblehead,IV
+PASD506_Monaghan,Monaghan,V
+PASA010_Ranger_1944,Ranger,V
+PASC710_Salem,Salem,VIII
+PASA528_Saipan,Saipan,VII
+PASD509_Benham,Benham,VI
+PASA915_Midway_1945,Midway,★
+PJSA917_Hakuryu_1942,Hakuryu,★
+PBSB104_Orion,Orion,IV
+PASD013_Gearing_1945,Gearing,★
+PJSB021_Izumo_1938,Izumo,VIII
+PJSA009_Ryujo_1933,Ryujo,V
+PASC209_Seattle,Seattle,VIII
+PASB109_Minnesota,Minnesota,VIII
+PJSC034_Zao_1944,Zao,★
+PASC577_Wichita_22,Wichita,VII
+PJSC038_Atago_1944,Atago,VII
+PJSA518_Kaga,Kaga,VII
+PASC528_Congress,Congress,VII
+PASC548_San_Diego,San Diego,VII
+PJSB508_Kii,Kii,VII
+PJSB519_Hizen,Hizen,VIII
+PJSC508_Suzuya,Suzuya,VII
+PASB536_North_Carolina_Leviafan,North_Carolina,VI
+PASA508_Enterprise,Enterprise,VII
+PBSB112_Temeraire,Temeraire,VIII
