@@ -63,12 +63,17 @@ MODE_MAP = {
     28: "軍記", 29: "アーケード[ソロ]", 30: "アーケード[2人分隊]", 31: "アーケード[3人分隊]"
 }
 def get_target_ids(sel_p, mode_map):
-    """親モードから対象となるモードIDのリストを返す"""
-    if sel_p == "ランダム":
-        # ランダムだけは「総合」キーが存在する
-        return [k for k, v in mode_map.items() if v.startswith(sel_p)]
+    """親モードから対象モードIDを取得"""
+    # 「総合」データが直接存在するモード
+    special_comprehensive = {
+        "ランダム": 1,   # キー1 = ランダム[総合]
+        # 将来他のモードで総合キーがある場合はここに追加
+    }
     
-    # その他のモードは子モードをすべて合計して「総合」とする
+    if sel_p in special_comprehensive:
+        return [special_comprehensive[sel_p]]
+    
+    # それ以外は子モードを合計
     return [k for k, v in mode_map.items() if v.startswith(sel_p)]
 
 TIER_ORDER = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', '★']
