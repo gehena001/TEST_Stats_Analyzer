@@ -404,7 +404,7 @@ if uploaded_file:
 
                 # フィルタ
                 st.divider()
-                st.subheader("📊 Tier / 国籍 / 艦種 フィルタ")
+                st.subheader("📊フィルタ(Tier/国籍/艦種)")
                 col1, col2, col3 = st.columns(3)
 
                 with col1:
@@ -446,7 +446,7 @@ if uploaded_file:
                 ].copy()
 
                 st.divider()
-                st.subheader("🚢 艦艇データリスト（上位50隻）")
+                st.subheader("🚢 艦艇リスト(上位50隻)")
 
                 res = filtered.groupby(['艦名', 'Tier', '艦種']).agg({
                     C['battles']:'sum', C['wins']:'sum', C['damage']:'sum', 
