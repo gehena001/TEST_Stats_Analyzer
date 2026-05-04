@@ -373,19 +373,41 @@ if uploaded_file:
                             icon_file = nation_icons.get(nation)
                             if icon_file:
                                 try:
-                                    # 背景を白くして重なり防止 + 中央寄せ
+                                    # 画像がある場合は表示（白背景で綺麗に）
                                     st.markdown(f"""
-                                        <div style="text-align:center; padding: 4px 0;">
-                                            <img src="flags/{icon_file}" width="42" style="background-color:white; padding:3px; border-radius:6px;">
+                                        <div style="text-align:center; padding: 6px 0 2px 0;">
+                                            <img src="flags/{icon_file}" width="44" 
+                                                 style="background-color:white; padding:4px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
                                         </div>
                                     """, unsafe_allow_html=True)
                                 except:
-                                    st.markdown(f"<div style='text-align:center; font-size:0.82rem; font-weight:bold; padding-top:4px;'>{nation}</div>", 
-                                              unsafe_allow_html=True)
+                                    # 画像読み込み失敗時 → 絵文字＋国名
+                                    emoji_dict = {
+                                        '日本': '🇯🇵', 'アメリカ': '🇺🇸', 'イギリス': '🇬🇧', 'イギリス連邦': '🇬🇧',
+                                        'フランス': '🇫🇷', 'ドイツ': '🇩🇪', 'イタリア': '🇮🇹', 'ソ連': '☭',
+                                        'オランダ': '🇳🇱', 'ヨーロッパ': '🇪🇺', 'パンアジア': '🌏', 
+                                        'パンアメリカ': '🌎', 'その他': '🌍'
+                                    }
+                                    emoji = emoji_dict.get(nation, '🏴')
+                                    st.markdown(f"""
+                                        <div style="text-align:center; font-size:1.9rem; padding:4px 0 2px 0;">
+                                            {emoji}
+                                        </div>
+                                    """, unsafe_allow_html=True)
                             else:
-                                st.markdown(f"<div style='text-align:center; font-size:0.82rem; font-weight:bold; padding-top:4px;'>{nation}</div>", 
-                                          unsafe_allow_html=True)
-
+                                # 辞書にない国はテキストのみ
+                                st.markdown(f"""
+                                    <div style="text-align:center; font-size:0.82rem; font-weight:bold; padding-top:8px;">
+                                        {nation}
+                                    </div>
+                                """, unsafe_allow_html=True)
+                            
+                            # 国名は常に小さく表示（アイコンの下）
+                            st.markdown(f"""
+                                <div style="text-align:center; font-size:0.78rem; line-height:1.1;">
+                                    {nation}
+                                </div>
+                            """, unsafe_allow_html=True)
                 # フィルタ
                 st.divider()
                 st.subheader("📊 Tier / 国籍 / 艦種 フィルタ")
