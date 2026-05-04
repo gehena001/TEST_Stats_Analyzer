@@ -86,10 +86,15 @@ def get_wr_color(val):
     try:
         v = float(val)
         if v >= 65: return '#FE0096'
-        elif v >= 60: return '#FE7F00'
-        elif v >= 54: return '#00AA00'
+        elif v >= 62: return '#FE7F00'
+        elif v >= 60: return '#FB6902'
+        elif v >= 58: return '#FFB817'
+        elif v >= 56: return '#FBEF00'
+        elif v >= 54: return '#C4FF00'
+        elif v >= 52: return '#03D574'
+        elif v >= 50: return '#14C4C1'
     except: pass
-    return '#333333'
+    return '#0093FB'
 
 st.title("🚢 WoWS Legends Stats Analyzer")
 
