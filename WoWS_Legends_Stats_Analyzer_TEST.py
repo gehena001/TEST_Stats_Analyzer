@@ -91,6 +91,22 @@ st.markdown("""
     .modebar { 
         display: none !important; 
     }
+
+    /* フィルタのタグをスマホでコンパクトに */
+    [data-baseweb="tag"] {
+        background-color: #81d4fa !important;
+        color: #01579b !important;
+        border-radius: 9999px !important;
+        font-size: 0.82rem !important;
+        padding: 3px 8px !important;
+        margin: 2px 1px !important;
+        max-width: 100% !important;
+    }
+
+    /* フィルタのタイトルを少し小さく */
+    .stMultiSelect label {
+        font-size: 0.95rem !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -366,7 +382,6 @@ if uploaded_file:
                 col1, col2, col3 = st.columns(3)
 
                 with col1:
-                    # Tierをローマ数字でソート（TIER_ORDERの順番通り）
                     all_tiers = sorted(
                         tab_df['Tier'].unique(), 
                         key=lambda x: (TIER_ORDER.index(x) if x in TIER_ORDER else 99)
@@ -375,20 +390,27 @@ if uploaded_file:
                         "**Tier**", 
                         options=all_tiers, 
                         default=all_tiers, 
-                        key=f"tier_{i}"
+                        key=f"tier_{i}",
+                        placeholder="すべて"
                     )
 
                 with col2:
-                    selected_nations = st.multiselect("**国籍**", options=sorted(tab_df['国籍'].unique()), default=sorted(tab_df['国籍'].unique()), key=f"nation_{i}")
-                with col3:
-                    selected_types = st.multiselect("**艦種**", options=sorted(tab_df['艦種'].unique()), default=sorted(tab_df['艦種'].unique()), key=f"type_{i}")
+                    selected_nations = st.multiselect(
+                        "**国籍**", 
+                        options=sorted(tab_df['国籍'].unique()), 
+                        default=sorted(tab_df['国籍'].unique()), 
+                        key=f"nation_{i}",
+                        placeholder="すべて"
+                    )
 
-                # フィルタリング（selected_tiers は元の数字形式なのでそのまま使える）
-                filtered = tab_df[
-                    (tab_df['Tier'].isin(selected_tiers)) &
-                    (tab_df['国籍'].isin(selected_nations)) &
-                    (tab_df['艦種'].isin(selected_types))
-                ].copy()
+                with col3:
+                    selected_types = st.multiselect(
+                        "**艦種**", 
+                        options=sorted(tab_df['艦種'].unique()), 
+                        default=sorted(tab_df['艦種'].unique()), 
+                        key=f"type_{i}",
+                        placeholder="すべて"
+                    )
 
                 st.divider()
                 st.subheader("🚢 艦艇データリスト")
