@@ -133,18 +133,26 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
 
-    /* 艦艇データリストのスクロール改善（スマホ対応） */
+    /* ==================== データフレーム スクロール改善（スマホ重要） ==================== */
     [data-testid="stDataFrame"] {
         -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior: contain !important;
+        scroll-behavior: auto !important;
     }
     
     [data-testid="stDataFrame"] div[role="grid"] {
-        overscroll-behavior: contain !important;
+        overscroll-behavior-y: contain !important;
+        -webkit-overflow-scrolling: touch !important;
     }
     
-    /* データフレームのヘッダー固定を維持しつつスクロール安定化 */
+    /* 慣性スクロールを抑える */
     [data-testid="stDataFrame"] .stDataFrame {
         scrollbar-width: thin;
+        -ms-overflow-style: none;
+    }
+    
+    [data-testid="stDataFrame"] .stDataFrame::-webkit-scrollbar {
+        display: none; /* スクロールバー非表示でもスクロールは可能 */
     }
     </style>
     """, unsafe_allow_html=True)
