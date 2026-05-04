@@ -133,17 +133,23 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
     
-    /* 艦艇データリストのスクロール連鎖防止（より対象を絞った版） */
-    [data-testid="stDataFrame"] [data-testid="stVerticalBlockBorderWrapper"] > div,
-    [data-testid="stDataEditor"] [data-testid="stVerticalBlockBorderWrapper"] > div {
+    /* ==================== 艦艇データリスト スクロール干渉防止 ==================== */
+    
+    /* 1. データフレーム本体 */
+    [data-testid="stDataFrame"] {
+        overscroll-behavior: contain !important;
+        overscroll-behavior-y: contain !important;
+    }
+    
+    /* 2. 内部のグリッド（一番効果が高い） */
+    [data-testid="stDataFrame"] div[role="grid"] {
         overscroll-behavior-y: contain !important;
         -webkit-overflow-scrolling: touch !important;
         touch-action: pan-y !important;
     }
     
-    /* さらに強力にデータフレーム内のグリッドを保護 */
-    [data-testid="stDataFrame"] div[role="grid"],
-    [data-testid="stDataEditor"] div[role="grid"] {
+    /* 3. データフレームを包むコンテナ */
+    [data-testid="stDataFrame"] > div {
         overscroll-behavior-y: contain !important;
     }
     </style>
