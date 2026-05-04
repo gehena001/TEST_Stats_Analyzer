@@ -468,7 +468,7 @@ if uploaded_file:
                     hide_index=True,
                     height=520,
                     disabled=True,                    # 編集不可にする
-                    key=f"ship_editor_{i}"）
+                    key=f"ship_editor_{i}"
                 )
 
                 # 詳細プロファイル
