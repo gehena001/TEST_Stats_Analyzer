@@ -132,6 +132,21 @@ st.markdown("""
     .stMultiSelect label {
         font-size: 0.95rem !important;
     }
+    
+    /* ==================== 艦艇データリスト スクロール連鎖防止 ==================== */
+    /* データフレーム内のスクロールがページ全体に伝播しないようにする */
+    [data-testid="stDataFrame"] div[role="grid"],
+    [data-testid="stDataEditor"] div[role="grid"] {
+        overscroll-behavior-y: contain !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    /* より強力に連鎖を遮断（必要に応じて） */
+    [data-testid="stDataFrame"],
+    [data-testid="stDataEditor"] {
+        overscroll-behavior-y: contain !important;
+        touch-action: pan-y !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
