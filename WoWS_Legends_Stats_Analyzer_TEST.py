@@ -13,29 +13,62 @@ st.set_page_config(
 # --- カスタムCSS ---
 st.markdown("""
     <style>
-    .main { background-color: #ffffff; }
-    div[data-testid="stMetric"] { background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; padding: 10px; }
+    .main { 
+        background-color: #ffffff; 
+    }
+    
+    /* メトリクスの改善（ダークモード対応） */
+    div[data-testid="stMetric"] {
+        background-color: #f8f9fa !important;
+        border: 1px solid #dee2e6 !important;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    /* ダークモード対応 */
+    @media (prefers-color-scheme: dark) {
+        .main {
+            background-color: #1e1e1e !important;
+        }
+        div[data-testid="stMetric"] {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+            color: #ffffff !important;
+        }
+        div[data-testid="stMetric"] label {
+            color: #aaaaaa !important;
+        }
+    }
+
     .ship-card { background-color: #ffffff; padding: 8px; border-bottom: 1px solid #eee; margin-bottom: 4px; }
     .ship-name { font-weight: bold; color: #333; font-size: 0.9rem; }
     .ship-meta { color: #666; font-size: 0.8rem; }
     .ship-wr { float: right; font-weight: bold; }
-    .stats-container { background-color: #fcfcfc; border: 1px solid #eee; border-radius: 8px; padding: 18px; margin-bottom: 20px; }
-    .stats-section-title { color: #444; border-bottom: 2px solid #ccc; padding-bottom: 5px; margin-bottom: 15px; font-weight: bold; font-size: 1.05rem; }
-    .stats-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.92rem; }
-    .stats-label { color: #666; }
-    .stats-value { color: #222; font-weight: bold; }
-    /* 薄い水色タグ */
+    
+    .stats-container { 
+        background-color: #fcfcfc; 
+        border: 1px solid #eee; 
+        border-radius: 8px; 
+        padding: 18px; 
+        margin-bottom: 20px; 
+    }
+    
+    /* ダークモード対応（stats-container） */
+    @media (prefers-color-scheme: dark) {
+        .stats-container {
+            background-color: #2d2d2d !important;
+            border: 1px solid #444 !important;
+            color: #ffffff !important;
+        }
+        .stats-section-title { color: #ffffff !important; }
+        .stats-label { color: #aaaaaa !important; }
+        .stats-value { color: #ffffff !important; }
+    }
+    
     [data-baseweb="tag"] {
         background-color: #81d4fa !important;
         color: #01579b !important;
         border-radius: 9999px !important;
-    }
-    [data-baseweb="tag"] * { color: #01579b !important; }
-    /* グラフ操作無効化 */
-    [data-testid="stVegaLiteChart"] { position: relative; }
-    [data-testid="stVegaLiteChart"]::after {
-        content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        z-index: 100; background: rgba(255,255,255,0);
     }
     </style>
     """, unsafe_allow_html=True)
