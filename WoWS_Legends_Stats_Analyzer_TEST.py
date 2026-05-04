@@ -53,16 +53,41 @@ st.markdown("""
         margin-bottom: 20px; 
     }
     
+    .stats-section-title { 
+        color: #444; 
+        border-bottom: 2px solid #ccc; 
+        padding-bottom: 5px; 
+        margin-bottom: 15px; 
+        font-weight: bold; 
+        font-size: 1.05rem; 
+    }
+    
+    .stats-row { 
+        display: flex; 
+        justify-content: space-between; 
+        padding: 6px 0; 
+        border-bottom: 1px solid #f0f0f0; 
+        font-size: 0.92rem; 
+    }
+    
+    .stats-label { color: #666; }
+    .stats-value { color: #222; font-weight: bold; }
+
     /* ダークモード対応（stats-container） */
     @media (prefers-color-scheme: dark) {
         .stats-container {
             background-color: #2d2d2d !important;
-            border: 1px solid #444 !important;
-            color: #ffffff !important;
+            border: 1px solid #555 !important;
         }
-        .stats-section-title { color: #ffffff !important; }
-        .stats-label { color: #aaaaaa !important; }
+        .stats-section-title { 
+            color: #ffffff !important; 
+            border-bottom: 2px solid #666 !important;
+        }
+        .stats-label { color: #bbbbbb !important; }
         .stats-value { color: #ffffff !important; }
+        .stats-row { 
+            border-bottom: 1px solid #444 !important; 
+        }
     }
     
     [data-baseweb="tag"] {
