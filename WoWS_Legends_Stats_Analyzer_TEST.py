@@ -132,6 +132,20 @@ st.markdown("""
     .stMultiSelect label {
         font-size: 0.95rem !important;
     }
+
+    /* 艦艇データリストのスクロール改善（スマホ対応） */
+    [data-testid="stDataFrame"] {
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    [data-testid="stDataFrame"] div[role="grid"] {
+        overscroll-behavior: contain !important;
+    }
+    
+    /* データフレームのヘッダー固定を維持しつつスクロール安定化 */
+    [data-testid="stDataFrame"] .stDataFrame {
+        scrollbar-width: thin;
+    }
     </style>
     """, unsafe_allow_html=True)
 
