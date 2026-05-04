@@ -133,19 +133,18 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
     
-    /* ==================== 艦艇データリスト スクロール連鎖防止 ==================== */
-    /* データフレーム内のスクロールがページ全体に伝播しないようにする */
+    /* 艦艇データリストのスクロール連鎖防止（より対象を絞った版） */
+    [data-testid="stDataFrame"] [data-testid="stVerticalBlockBorderWrapper"] > div,
+    [data-testid="stDataEditor"] [data-testid="stVerticalBlockBorderWrapper"] > div {
+        overscroll-behavior-y: contain !important;
+        -webkit-overflow-scrolling: touch !important;
+        touch-action: pan-y !important;
+    }
+    
+    /* さらに強力にデータフレーム内のグリッドを保護 */
     [data-testid="stDataFrame"] div[role="grid"],
     [data-testid="stDataEditor"] div[role="grid"] {
         overscroll-behavior-y: contain !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-
-    /* より強力に連鎖を遮断（必要に応じて） */
-    [data-testid="stDataFrame"],
-    [data-testid="stDataEditor"] {
-        overscroll-behavior-y: contain !important;
-        touch-action: pan-y !important;
     }
     </style>
     """, unsafe_allow_html=True)
