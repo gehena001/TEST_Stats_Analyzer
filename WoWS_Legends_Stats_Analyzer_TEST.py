@@ -108,9 +108,9 @@ def load_master_data():
         except: return None
     return None
 
-NATION_MAP = {'G': 'ドイツ', 'I': 'イタリア', 'A': 'アメリカ', 'B': 'イギリス', 'R': 'ソ連', 'H': 'オランダ', 
-              'F': 'フランス', 'Z': 'パンアジア', 'S': 'スペイン', 'J': '日本', 'W': 'ヨーロッパ', 
-              'U': 'イギリス連邦', 'V': 'パンアメリカ'}
+NATION_MAP = {'G': 'KM', 'I': 'IT', 'A': 'US', 'B': 'UK', 'R': 'RU', 'H': 'NL', 
+              'F': 'FR', 'Z': 'PA', 'S': 'ES', 'J': 'JP', 'W': 'EU', 
+              'U': 'CW', 'V': 'PM'}
 TYPE_MAP = {'B': '戦艦', 'C': '巡洋艦', 'D': '駆逐艦', 'A': '空母'}
 PARENT_MODES = ["ランダム", "Coop", "ランク", "アリーナ", "闘争", "艦隊戦", "軍記", "アーケード"]
 MODE_MAP = {
