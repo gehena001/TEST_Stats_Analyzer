@@ -133,27 +133,6 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
 
-    /* ==================== データフレーム スクロール改善（スマホ重要） ==================== */
-    [data-testid="stDataFrame"] {
-        -webkit-overflow-scrolling: touch !important;
-        overscroll-behavior: contain !important;
-        scroll-behavior: auto !important;
-    }
-    
-    [data-testid="stDataFrame"] div[role="grid"] {
-        overscroll-behavior-y: contain !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-    
-    /* 慣性スクロールを抑える */
-    [data-testid="stDataFrame"] .stDataFrame {
-        scrollbar-width: thin;
-        -ms-overflow-style: none;
-    }
-    
-    [data-testid="stDataFrame"] .stDataFrame::-webkit-scrollbar {
-        display: none; /* スクロールバー非表示でもスクロールは可能 */
-    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -482,15 +461,14 @@ if uploaded_file:
                 final_l['平均基本EXP'] = (final_l['平均基本EXP'] / final_l['戦闘数']).astype(int)
                 final_l = final_l.sort_values('戦闘数', ascending=False)
 
-                selection = st.dataframe(
+                selection = st.data_editor(
                     final_l.style.map(lambda v: f'color: {get_wr_color(v)}; font-weight: bold', subset=['勝率'])
                     .format({'戦闘数': '{:,.0f}', '勝率': '{:.2f}%', '平均ダメ': '{:,}', '平均基本EXP': '{:,}', 'キル/デス': '{:.2f}'}),
-                    use_container_width=True, 
-                    hide_index=True, 
-                    height=480,                    # 高さを少し増やす
-                    selection_mode="single-row", 
-                    on_select="rerun",
-                    key=f"df_{i}"                  # keyを追加（再描画対策）
+                    use_container_width=True,
+                    hide_index=True,
+                    height=520,
+                    disabled=True,                    # 編集不可にする
+                    key=f"ship_editor_{i}"）
                 )
 
                 # 詳細プロファイル
