@@ -132,6 +132,25 @@ st.markdown("""
     .stMultiSelect label {
         font-size: 0.95rem !important;
     }
+    
+    /* ==================== 艦艇データリスト スクロール競合対策 ==================== */
+    [data-testid="stDataFrame"], [data-testid="stDataEditor"] {
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior: contain !important;
+        overscroll-behavior-y: contain !important;
+        touch-action: pan-y !important;           /* 縦スクロールのみ許可 */
+    }
+    
+    [data-testid="stDataFrame"] div[role="grid"],
+    [data-testid="stDataEditor"] div[role="grid"] {
+        overscroll-behavior-y: contain !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    /* ページ全体のスクロールを優先させる */
+    .main .stDataFrame, .main .stDataEditor {
+        overscroll-behavior-y: none !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -463,8 +482,12 @@ if uploaded_file:
                 selection = st.dataframe(
                     final_l.style.map(lambda v: f'color: {get_wr_color(v)}; font-weight: bold', subset=['勝率'])
                     .format({'戦闘数': '{:,.0f}', '勝率': '{:.2f}%', '平均ダメ': '{:,}', '平均基本EXP': '{:,}', 'キル/デス': '{:.2f}'}),
-                    use_container_width=True, hide_index=True, height=400,
-                    selection_mode="single-row", on_select="rerun"
+                    use_container_width=True, 
+                    hide_index=True, 
+                    height=480,                    # 調整可能
+                    selection_mode="single-row", 
+                    on_select="rerun",
+                    key=f"ship_list_{i}"
                 )
 
                 # 詳細プロファイル
