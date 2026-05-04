@@ -329,7 +329,7 @@ if uploaded_file:
                     st.caption("🌍 国籍分布")
                     nation_counts = tab_df.groupby('国籍')[C['battles']].sum().sort_values(ascending=False)
                     
-                    # 国籍アイコン用の辞書（後でpngに置き換え）
+                    # 国籍アイコン用の辞書
                     nation_icons = {
                         'アメリカ': 'usa.png', 'イギリス': 'uk.png', 'イギリス連邦': 'commonwealth.png',
                         'イタリア': 'italy.png', 'オランダ': 'netherlands.png', 'ソ連': 'ussr.png',
@@ -341,7 +341,7 @@ if uploaded_file:
                     fig_nation = px.bar(
                         x=nation_counts.index,
                         y=nation_counts.values,
-                        height=420,
+                        height=400,                    # 少し小さめに調整
                         text=nation_counts.values,
                         color_discrete_sequence=['#1f77b4']
                     )
@@ -351,10 +351,10 @@ if uploaded_file:
                         yaxis_title=None, 
                         showlegend=False, 
                         bargap=0.25,
-                        margin=dict(l=10, r=10, t=30, b=100),   # 下余白を多めに
+                        margin=dict(l=10, r=10, t=30, b=65),   # 下余白をさらに詰める
                         xaxis=dict(
                             fixedrange=True,
-                            showticklabels=False,          # 国籍名を非表示
+                            showticklabels=False,
                         ),
                         yaxis=dict(
                             fixedrange=True,
@@ -365,27 +365,21 @@ if uploaded_file:
                     fig_nation.update_traces(textposition='outside', texttemplate='%{text:,}')
                     st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False})
                     
-                    # ==================== 国籍ラベル / アイコン ====================
-                    st.markdown("**国籍**")
-                    
-                    # グラフの棒と同じ順番・同じ数で列を作成
-                    cols = st.columns(len(nation_counts))
+                    # ==================== 国籍ラベル ====================
+                    cols = st.columns(len(nation_counts), gap="small")   # gapを小さく
                     
                     for col, nation in zip(cols, nation_counts.index):
                         with col:
                             icon_file = nation_icons.get(nation)
                             if icon_file:
-                                # アイコンがある場合は表示（flagsフォルダに置く場合）
                                 try:
-                                    st.image(f"flags/{icon_file}", width=48)
+                                    st.image(f"flags/{icon_file}", width=42)   # 少し小さめに
                                 except:
-                                    st.markdown(f"**{nation}**")
+                                    st.markdown(f"<div style='text-align:center; font-size:0.85rem; font-weight:bold;'>{nation}</div>", 
+                                              unsafe_allow_html=True)
                             else:
-                                # アイコンがない場合はテキスト表示
-                                st.markdown(f"**{nation}**")
-                            
-                            # 必要なら戦闘数も小さく表示
-                            # st.caption(f"{int(nation_counts[nation]):,}")
+                                st.markdown(f"<div style='text-align:center; font-size:0.85rem; font-weight:bold;'>{nation}</div>", 
+                                          unsafe_allow_html=True)
 
                 # フィルタ
                 st.divider()
