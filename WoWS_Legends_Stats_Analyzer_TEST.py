@@ -351,7 +351,7 @@ if uploaded_file:
                         yaxis_title=None, 
                         showlegend=False, 
                         bargap=0.25,
-                        margin=dict(l=10, r=10, t=30, b=65),   # 下余白をさらに詰める
+                        margin=dict(l=10, r=10, t=30, b=40),   # 下余白をさらに詰める
                         xaxis=dict(
                             fixedrange=True,
                             showticklabels=False,
