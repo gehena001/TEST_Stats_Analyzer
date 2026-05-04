@@ -332,7 +332,7 @@ if uploaded_file:
                     fig_nation = px.bar(
                         x=nation_counts.index,
                         y=nation_counts.values,
-                        height=350, 
+                        height=320, 
                         text=nation_counts.values,
                         color_discrete_sequence=['#1f77b4']
                     )
