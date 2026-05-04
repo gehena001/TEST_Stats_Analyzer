@@ -412,8 +412,16 @@ if uploaded_file:
                         placeholder="すべて"
                     )
 
+                # === フィルタリング ===
+                filtered = tab_df[
+                    (tab_df['Tier'].isin(selected_tiers)) &
+                    (tab_df['国籍'].isin(selected_nations)) &
+                    (tab_df['艦種'].isin(selected_types))
+                ].copy()
+
                 st.divider()
                 st.subheader("🚢 艦艇データリスト")
+
                 res = filtered.groupby(['艦名', 'Tier', '艦種']).agg({
                     C['battles']:'sum', C['wins']:'sum', C['damage']:'sum', C['frags']:'sum', C['xp']:'sum', C['survived']:'sum'
                 }).reset_index()
