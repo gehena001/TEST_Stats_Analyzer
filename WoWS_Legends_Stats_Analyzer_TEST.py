@@ -446,14 +446,16 @@ if uploaded_file:
                 ].copy()
 
                 st.divider()
-                st.subheader("🚢 艦艇データリスト")
+                st.subheader("🚢 艦艇データリスト（上位100隻）")
 
                 res = filtered.groupby(['艦名', 'Tier', '艦種']).agg({
-                    C['battles']:'sum', C['wins']:'sum', C['damage']:'sum', C['frags']:'sum', C['xp']:'sum', C['survived']:'sum'
+                    C['battles']:'sum', C['wins']:'sum', C['damage']:'sum', 
+                    C['frags']:'sum', C['xp']:'sum', C['survived']:'sum'
                 }).reset_index()
 
                 res['勝率'] = (res[C['wins']] / res[C['battles']] * 100).round(2)
-                res['キル/デス'] = res.apply(lambda x: x[C['frags']] if (x[C['battles']]-x[C['survived']]) == 0 else round(x[C['frags']]/(x[C['battles']]-x[C['survived']]), 2), axis=1)
+                res['キル/デス'] = res.apply(lambda x: x[C['frags']] if (x[C['battles']]-x[C['survived']]) == 0 
+                                           else round(x[C['frags']]/(x[C['battles']]-x[C['survived']]), 2), axis=1)
 
                 final_l = res[['艦名','Tier','艦種',C['battles'],'勝率','キル/デス',C['damage'],C['xp']]].copy()
                 final_l.columns = ['艦名','Tier','艦種','戦闘数','勝率','キル/デス','平均ダメ','平均基本EXP']
@@ -461,11 +463,18 @@ if uploaded_file:
                 final_l['平均基本EXP'] = (final_l['平均基本EXP'] / final_l['戦闘数']).astype(int)
                 final_l = final_l.sort_values('戦闘数', ascending=False)
 
+                # === 100隻に制限 ===
+                final_l = final_l.head(100)
+
                 selection = st.dataframe(
                     final_l.style.map(lambda v: f'color: {get_wr_color(v)}; font-weight: bold', subset=['勝率'])
                     .format({'戦闘数': '{:,.0f}', '勝率': '{:.2f}%', '平均ダメ': '{:,}', '平均基本EXP': '{:,}', 'キル/デス': '{:.2f}'}),
-                    use_container_width=True, hide_index=True, height=400,
-                    selection_mode="single-row", on_select="rerun"
+                    use_container_width=True, 
+                    hide_index=True, 
+                    height=480,                    # 100隻表示に最適な高さ
+                    selection_mode="single-row", 
+                    on_select="rerun",
+                    key=f"ship_list_{i}"
                 )
 
                 # 詳細プロファイル
