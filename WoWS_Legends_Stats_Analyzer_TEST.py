@@ -13,32 +13,47 @@ st.set_page_config(
 # --- カスタムCSS ---
 st.markdown("""
     <style>
-    .main { 
-        background-color: #ffffff; 
+    .main { background-color: #ffffff; }
+    
+    /* メトリクス（前回のダークモード対応も含む） */
+    div[data-testid="stMetric"] { 
+        background-color: #f8f9fa; 
+        border: 1px solid #dee2e6; 
+        border-radius: 10px; 
+        padding: 10px; 
     }
     
-    /* メトリクスの改善（ダークモード対応） */
-    div[data-testid="stMetric"] {
-        background-color: #f8f9fa !important;
-        border: 1px solid #dee2e6 !important;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    
-    /* ダークモード対応 */
     @media (prefers-color-scheme: dark) {
-        .main {
-            background-color: #1e1e1e !important;
-        }
+        .main { background-color: #1e1e1e !important; }
         div[data-testid="stMetric"] {
             background-color: #2d2d2d !important;
             border: 1px solid #444 !important;
             color: #ffffff !important;
         }
-        div[data-testid="stMetric"] label {
-            color: #aaaaaa !important;
-        }
+        div[data-testid="stMetric"] label { color: #aaaaaa !important; }
     }
+
+    /* === グラフ操作無効化の緩和（スマホ対応） === */
+    [data-testid="stPlotlyChart"], [data-testid="stVegaLiteChart"] {
+        position: relative;
+    }
+    
+    /* 完全にブロックせず、操作メニューだけ非表示に */
+    [data-testid="stPlotlyChart"]::after,
+    [data-testid="stVegaLiteChart"]::after {
+        content: ""; 
+        position: absolute; 
+        top: 0; left: 0; 
+        width: 100%; height: 100%;
+        z-index: 5;           /* 10 → 5 に下げてタッチを優先 */
+        pointer-events: none; /* これが重要！タッチイベントを通す */
+        background: rgba(255,255,255,0);
+    }
+
+    /* Plotlyのモードバー（ツールバー）は非表示のまま */
+    .modebar { display: none !important; }
+    </style>
+    """, unsafe_allow_html=True)
 
     .ship-card { background-color: #ffffff; padding: 8px; border-bottom: 1px solid #eee; margin-bottom: 4px; }
     .ship-name { font-weight: bold; color: #333; font-size: 0.9rem; }
