@@ -479,15 +479,16 @@ if uploaded_file:
                 final_l['平均基本EXP'] = (final_l['平均基本EXP'] / final_l['戦闘数']).astype(int)
                 final_l = final_l.sort_values('戦闘数', ascending=False)
 
-                selection = st.dataframe(
+                selection = st.data_editor(
                     final_l.style.map(lambda v: f'color: {get_wr_color(v)}; font-weight: bold', subset=['勝率'])
                     .format({'戦闘数': '{:,.0f}', '勝率': '{:.2f}%', '平均ダメ': '{:,}', '平均基本EXP': '{:,}', 'キル/デス': '{:.2f}'}),
                     use_container_width=True, 
                     hide_index=True, 
-                    height=480,                    # 調整可能
+                    height=460,                    # ここは480前後で調整
+                    disabled=True,                 # 編集不可
                     selection_mode="single-row", 
                     on_select="rerun",
-                    key=f"ship_list_{i}"
+                    key=f"ship_editor_{i}"
                 )
 
                 # 詳細プロファイル
