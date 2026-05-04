@@ -4,7 +4,11 @@ import pandas as pd
 import os
 import plotly.express as px
 
-st.set_page_config(page_title="WoWS Legends Stats Analyzer", layout="wide")
+st.set_page_config(
+    page_title="WoWS Legends Stats Analyzer", 
+    layout="wide",
+    initial_sidebar_state="collapsed"  # スマホではサイドバーを閉じる
+)
 
 # --- カスタムCSS ---
 st.markdown("""
