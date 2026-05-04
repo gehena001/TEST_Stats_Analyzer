@@ -1,13 +1,16 @@
 id,name,Tier
 PASA004_Langley_1929,Langley,III
 PASA010_Ranger_1944,Ranger,V
+PASA108_Lexington,Lexington,VII
 PASA508_Enterprise,Enterprise,VII
 PASA528_Saipan,Saipan,VII
 PASA915_Midway_1945,Midway,★
+PASB001_Michigan_1916,South Carolina,III
 PASB004_Arkansas_1912,Arkansas,III
 PASB006_New_York_1934,New_York,IV
 PASB008_Colorado_1945,Colorado,VI
 PASB012_North_Carolina_1945,North_Carolina,VI
+PASB014_Arkansas_1912_clone,Arkansas(clone),III
 PASB017_Montana_1945,Montana,★
 PASB018_Iowa_1944,Iowa,VII
 PASB034_New_Mexico_1941,New_Mexico,V
@@ -20,11 +23,13 @@ PASB118_Maine,Maine,VIII
 PASB207_Connecticut,Connecticut,VI
 PASB208_Nebraska,Nebraska,VII
 PASB209_Delaware,Delaware,VIII
+PASB505_Texas_1944_prem,Texas,IV
 PASB506_Arizona_1941,Arizona,VI
 PASB507_West_Virginia,West Virginia,VI
 PASB508_Alabama,Alabama,VII
 PASB509_Missouri,Missouri,VII
 PASB510_Ohio,Ohio,★
+PASB515_Oklahoma,Oklahoma,IV
 PASB518_Massachusetts,Massachusetts,VII
 PASB528_AL_Iowa,AL New Jersey,VII
 PASB536_North_Carolina_Leviafan,North_Carolina,VI
@@ -54,6 +59,7 @@ PASC208_Cleveland,Cleveland,VII
 PASC209_Seattle,Seattle,VIII
 PASC308_Montpelier,Montpelier,VII
 PASC503_Charleston,Charleston,II
+PASC508_Wichita,Wichita CE,VII
 PASC510_Alaska,Alaska,★
 PASC518_Anchorage,Anchorage,VII
 PASC519_Tulsa,Tulsa,VIII
@@ -66,15 +72,26 @@ PASC596_Indianapolis_B,Indianapolis B,VI
 PASC597_Nueve_de_Julio_1951,Rio de janeiro,IV
 PASC707_Flint,Flint,VI
 PASC710_Salem,Salem,VIII
+PASD002_Sampson_1917,Sampson,II
+PASD005_Farragut_1944,Farragut,IV
+PASD006_Mahan_1936,Mahan,V
+PASD008_Benson_1945,Charles F.Hughes,VI
 PASD013_Gearing_1945,Gearing,★
 PASD014_Leader_1919,Nicholas,IV
+PASD019_Clemson_1920,Clemson,III
+PASD021_Fletcher_1943,Fletcher,VII
+PASD027_Wickes_1918,Wickes,II
 PASD029_Sims_1941,Sims,VI
+PASD114_Allen_M_Sumner,Allen M.Sumner,VIII
+PASD505_Hill,Hill,IV
 PASD506_Monaghan,Monaghan,V
 PASD508_Kidd,Kidd,VI
 PASD509_Benham,Benham,VI
 PASD510_Somers,Somres,VII
 PASD518_Benson,Benson,VI
 PASD709_Black,Black,VII
+PBSA106_Furious,Furious,V
+PBSA204_Hermes,Hermes,VII
 PBSA518_Ark_Royal,Ark Royal,V
 PBSB002_Warspite_1941,Warspite,V
 PBSB103_Bellerophon,Bellerophon,III
@@ -97,6 +114,8 @@ PBSB517_Nelson,Nelson,VI
 PBSB527_Duke_of_York,Duke of York,VI
 PBSB537_Collingwood,Collingwood,VI
 PBSB557_Nelson_W,Nelson W,VI
+PBSB586_Black_Warspite,Warspite B,V
+PBSC102_Weymouth,Weymouth,I
 PBSC103_Caledon,Caledon,II
 PBSC104_Danae,Danae,III
 PBSC105_Emerald,Emerald,IV
@@ -130,6 +149,7 @@ PBSD110_Daring,Daring,★
 PBSD503_Campbeltown_1941,Campbeltown,II
 PBSD506_Gallant,Gallant,V
 PBSD508_Pirate_Le_Fantasque,Caprice,VII
+PFSB103_Turenne,Turenne,III
 PFSB104_Courbet,Courbet,III
 PFSB105_Bretagne,Bretagne,IV
 PFSB106_Normandie,Normandie,V
@@ -148,6 +168,8 @@ PFSB548_Pirate_Jean_Bart,La Foudre,VII
 PFSB558_Picardie,Picardie,VII
 PFSB566_Dunkerque_B,Dunkerque B,V
 PFSB599_Richelieu_AL,AL Richelieu,VII
+PFSC102_Jurien,Jurien de la Graviere,I
+PFSC103_Friant,Friant,II
 PFSC104_Duguay_Trouin,Duguay Trouin,III
 PFSC105_Emile_Bertin,Emile Bertin,IV
 PFSC106_La_Galissonniere,La Galissonniere,V
@@ -161,12 +183,17 @@ PFSC507_Charles_Martel_prem_HW,Charlemagne(仮),VI
 PFSC508_Bayard,Bayard,VII
 PFSC509_Carnot,Carnot,VIII
 PFSC510_Colbert,Colbert,★
+PFSC511_Colbert_R,Colbert R,★
 PFSC517_Algerie_W,Algerie W,VI
 PFSD102_Enseigne_Gabolde,Enseigne Gabolde,II
+PFSD103_Fusilier,Fusilier,II
+PFSD104_Bourrasque,Bourrasque,III
 PFSD105_Jaguar,Jaguar,IV
+PFSD106_Guepard,Guepard,V
 PFSD107_Vauquelin,Vauquelin,VI
 PFSD108_Le_Fantasque,Le Fantasque,VII
 PFSD110_Kleber,Kleber,★
+PFSD504_Siroco,Siroco,IV
 PFSD506_Aigle,Aigle,V
 PFSD508_Le_Terrible,Le Terrible,VI
 PFSD509_Le_Terrible_B,Le Terrible B,VI
@@ -174,15 +201,18 @@ PFSD516_Guepard_W,Guepard W,V
 PFSD526_Ernst_Gaede_Pirate,Le Glorieux,V
 PFSD605_Cyclone_event,Cyclone,IV
 PGSA104_Rhein,Rhein,III
+PGSA106_Weser,Weser,V
+PGSA108_Parseval,August von Parseval,VII
 PGSA508_Graf_Zeppelin,Graf Zeppelin,VII
 PGSB002_Tirpiz_1942,Tirpiz,VII
+PGSB103_Nassau,Nassau,III
 PGSB104_Kaiser,Kaiser,III
 PGSB105_Koenig,Koenig,IV
 PGSB106_Bayern,Bayern,V
 PGSB107_Gneisenau,Gneisenau,VI
 PGSB108_Bismarck,Bismarck,VII
 PGSB109_Friedrich_der_Grosse,Friedrich Der Grosse,VIII
-PGSB110_Grossdeutschland,Großer Kurfürst,★
+PGSB110_Grossdeutschland,Gro?er Kurf?rst,★
 PGSB205_Derfflinger,Derfflinger,IV
 PGSB206_Mackensen,Mackensen,V
 PGSB207_Prinz_Heinrich,Heinrich,VI
@@ -196,7 +226,10 @@ PGSB508_Odin,Odin,VII
 PGSB509_Pommern,Pommern,VIII
 PGSB518_Brandenburg,Brandenburg,VII
 PGSB529_Anhalt,Anhalt,VII
+PGSB597_Black_Scharnhorst,Scharnhorst B,VI
 PGSB717_Scharnhorst_1943,Scharnhorst '43,VII
+PGSC002_Drezden_1908,Drezden,I
+PGSC103_Kolberg,Kolberg,II
 PGSC104_Karlsruhe,Karlsruhe,III
 PGSC105_Konigsberg,Konigsberg,IV
 PGSC106_Nurnberg,Nurnberg,V
@@ -209,11 +242,13 @@ PGSC508_Prinz_Eugen,Prinz Eugen,VII
 PGSC509_Siegfried,Siegfried,VII
 PGSC510_Admiral_Graf_Spee_B,Graf Spee B,V
 PGSC517_Weimar,Weimar,VII
+PGSC518_Mainz,Mainz CE,VII
 PGSC519_Aegir,Aegir,VIII
 PGSC528_Schill,Schill,VII
 PGSC529_Admiral_Schroder,Schroder,VIII
 PGSC718_Mainz_22,Mainz,VII
 PGSD102_V_25,V-25,II
+PGSD104_V_170,V-170,III
 PGSD105_T_22,T-22,IV
 PGSD106_Ernst_Gaede,Gaede,V
 PGSD107_Leberecht_Maass,Maass,VI
@@ -221,12 +256,14 @@ PGSD108_Z_23,Z-23,VII
 PGSD109_Z_46,Z-46,VIII
 PGSD110_Z_52,Z-52,★
 PGSD207_Z_31,Z-31,VI
+PGSD503_G_101_clone,G-101,IV
 PGSD506_T_61,T-61,V
 PGSD508_Z_39,Z-39,VI
 PGSD518_Z_35,Z-35,VI
 PGSD528_Elbing_1944,Elbing,VIII
 PGSD529_ZF_6,ZF-6,VII
-PGSD596_Karl_von_Schonberg,Karl von Schönberg,VII
+PGSD538_Z_39_B,Z-39 B,VI
+PGSD596_Karl_von_Schonberg,Karl von Sch?nberg,VII
 PGSD599_Z_44,Z-44,VIII
 PHSC105_Celebes,Celebes,IV
 PHSC508_De_Zeven_Provincien,De Zeven Provincien,VII
@@ -251,6 +288,7 @@ PISC107_Zara,Zara,VI
 PISC108_Amalfi,Amalfi,VII
 PISC109_Brindisi,Brindisi,VIII
 PISC110_Venezia,Venezia,★
+PISC505_Genova,Genova,VI
 PISC506_DucadAosta,DucadAosta,V
 PISC510_Napoli,Napoli,★
 PISC511_Napoli_B,Napoli B,★
@@ -261,6 +299,7 @@ PISD105_Maestrale,Maestrale,IV
 PISD106_Aviere,Aviere,V
 PISD506_Leone,Leone,V
 PISD509_Paolo_Emilio,Paolo Emilio,VII
+PJSA002_Hosho_1939,Hosho,III
 PJSA006_Zuiho_1944,Zuiho,V
 PJSA009_Ryujo_1933,Ryujo,V
 PJSA518_Kaga,Kaga,VII
@@ -281,15 +320,19 @@ PJSB518_Hyuga,Hyuga,V
 PJSB519_Hizen,Hizen,VIII
 PJSB528_Hyuga_W,Hyuga W,V
 PJSB529_Iwami,Iwami,VIII
+PJSB596_Mutsu_B,Mutsu B,V
 PJSB707_Haruna,ARP Haruna,IV
 PJSB963_Musashi_ARP,ARP Musashi,VIII
+PJSC004_Yubari_1944,Yubari,III
 PJSC005_Furutaka_1926,Furutaka,IV
 PJSC007_Aoba_1943,Aoba,V
 PJSC008_Myoko_1945,Myoko,VI
 PJSC009_Mogami_1935,Mogami,VII
 PJSC012_Ibuki_1944,Ibuki,VIII
+PJSC013_Kuma_1938,kuma,III
 PJSC015_Tatsuta_1919,Tenryu,II
 PJSC026_Iwaki_1944,Iwaki,III
+PJSC027_Iwaki_1944_clone,Iwaki(clone),III
 PJSC034_Zao_1944,Zao,★
 PJSC035_Chikuma_1912,Chikuma,I
 PJSC038_Atago_1944,Atago,VII
@@ -298,6 +341,7 @@ PJSC206_Gokase,Gokase,V
 PJSC208_Shimanto,Shimanto,VII
 PJSC209_Takahashi,Takahashi,VIII
 PJSC502_Mikasa_1905,Mikasa,II
+PJSC503_Katori,Katori,II
 PJSC505_Yahagi,Yahagi,IV
 PJSC508_Suzuya,Suzuya,VII
 PJSC510_Azumaya,Azuma,VII
@@ -306,16 +350,28 @@ PJSC520_Yoshino,Yoshino,★
 PJSC717_Yellow_Dragon,Yellow Dragon,VI
 PJSC718_Suzuya_HW24,Blazing Dread,VII
 PJSC727_Blue_Dragon,Blue Dragon,VI
+PJSD001_Tachibana_1912,Tachibana,II
 PJSD003_Isokaze_1917,Isokaze,III
 PJSD012_Shimakaze_1943,Shimakaze,★
-PJSD017_Kamikaze_1930,Kamikaze,IV
+PJSD017_Kamikaze_1930,Kamikaze(1930),IV
 PJSD024_Wakatake_1923,Wakatake,II
+PJSD025_True_Kamikaze,Kamikaze(true),VI
 PJSD105_Mutsuki,Mutuki,IV
+PJSD106_Fubuki,Fubuki,V
+PJSD107_Akatsuki,Akatsuki,VI
+PJSD108_Akizuki,Akizuki,VII
+PJSD205_Minekadze,Minekaze,V
+PJSD206_Hatsuharu,Hatsuharu,V
+PJSD207_Shiratsuyu,Shiratsuyu,VI
+PJSD208_Kagero,Kagero,VII
 PJSD507_Yudachi,Yudachi,VII
 PJSD510_Hayate,Hayate,VIII
 PJSD518_Asashio,Asashio,VI
 PJSD706_Shinonome,Shinonome,VI
 PJSD708_HSF_Harekaze,kirisame,VII
+PJSD718_AZUR_Yukikaze,Yukikaze,VI
+PRSA104_Komsomolets,Komsomolets,III
+PRSA106_Serov,Serov,V
 PRSA508_Chkalov,Chkalov,VII
 PRSB101_Nikolay_I_Rasputin,Rasputin,V
 PRSB104_Gangut,Gangut,III
@@ -330,20 +386,28 @@ PRSB509_Navarin,Navarin,VIII
 PRSB518_Lenin,Lenin,VII
 PRSB528_Borodino,Borodino,VII
 PRSB901_Sovetskaya_Rossiya_AL,AL Sov. Rossiya,VIII
+PRSC001_Avrora_1917,Avrora,II
+PRSC004_Avrora_1917_B,Avrora B,II
 PRSC005_Azur_Avrora,AL Avrora,II
+PRSC102_Novik,Novik,I
+PRSC103_Bogatyr,Bogatyr,II
 PRSC104_Svetlana,Svetlana,III
 PRSC105_Kirov,Kirov,IV
 PRSC106_Pr_94_Budeny,Budyonny,VI
+PRSC107_Schors,Schors,VI
+PRSC108_Pr_68_Chapaev,Chapaev,VII
 PRSC208_Tallin,Tallin,VI
 PRSC209_Riga,Riga,VII
 PRSC215_Kotovsky,Kotovsky,IV
 PRSC216_Gorky,Gorky,V
 PRSC310_Petropavlovsk,Petropavlovsk,VIII
+PRSC503_Oleg,Oleg,II
 PRSC505_KrasniKrym,KrasniKrym,IV
 PRSC506_Molotov_1943,Molotov,V
 PRSC508_Kutuzov_1952,Kutuzov,VII
 PRSC509_Kronshtadt,Kronshtadt,VIII
 PRSC510_Stalingrad,Stalingrad,★
+PRSC511_Stalingrad_R,Stalingrad R,★
 PRSC515_Mikoyan,Mikoyan,IV
 PRSC528_Ochakov,Ochakov,VII
 PRSC538_Petr_Bagration,P.Bagration,VII
@@ -352,15 +416,30 @@ PRSC558_Kutuzov_W,Kutuzov W,VII
 PRSC578_Dmitry_Pozharsky,Dmitry Pozharsky,VII
 PRSC606_Admiral_Makarov,Admiral Makarov,V
 PRSD002_Gremyashchy_1942_clone,Gremyashchy,IV
+PRSD102_SM_Storojevoy,Storojevoy,II
+PRSD103_Derzky,Derzky,II
+PRSD104_Izyaslav,Izyaslav,III
+PRSD106_Pr_30_Ognevoy,Ognevoy,VI
+PRSD107_Pr_35_Udaloy,Udaloy,VII
+PRSD109_Pr_48_Kiev,Kiev,VI
 PRSD110_Pr_24_Khabarovsk,Khabarovsk,★
+PRSD205_Podvoisky_pr_1929,Podvoisky,IV
+PRSD206_Pr_7,Gnevny,V
+PRSD207_Minsk,Minsk,VI
+PRSD208_Pr_30,Boevoi,V
+PRSD304_Soobrazitelny,Soobrazitelny,IV
+PRSD409_Pr_20i_Tashkent,Tashkent,VII
 PRSD505_Okhotnik_1917,Okhotnik,IV
 PUSC510_Brisbane,Brisbane,★
 PUSC516_Mysore,Mysore,V
-PUSD510_Vampire_2,Vampire 2,★
+PUSD503_Vampire,Vampire,II
+PUSD510_Vampire_2,Vampire II,★
 PVSB508_Atlantico,Atlantico,VII
 PVSD506_Jurua,Jurua,V
 PWSB509_Karl_XIV_Johan,Karl XIV Johan,VIII
+PWSC101_Gryf,Gryf,I
 PWSC598_Numancia_Clone,La Perla Azul,VII
+PWSD103_Romulus,Romulus,II
 PWSD104_Klas_Horn,Klas Horn,III
 PWSD105_Visby,Visby,IV
 PWSD106_Vasteras,Vasteras,V
