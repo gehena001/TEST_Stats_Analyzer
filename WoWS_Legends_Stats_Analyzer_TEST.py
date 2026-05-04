@@ -446,7 +446,7 @@ if uploaded_file:
                 ].copy()
 
                 st.divider()
-                st.subheader("🚢 艦艇データリスト（上位100隻）")
+                st.subheader("🚢 艦艇データリスト（上位50隻）")
 
                 res = filtered.groupby(['艦名', 'Tier', '艦種']).agg({
                     C['battles']:'sum', C['wins']:'sum', C['damage']:'sum', 
@@ -463,8 +463,8 @@ if uploaded_file:
                 final_l['平均基本EXP'] = (final_l['平均基本EXP'] / final_l['戦闘数']).astype(int)
                 final_l = final_l.sort_values('戦闘数', ascending=False)
 
-                # === 100隻に制限 ===
-                final_l = final_l.head(100)
+                # === 50隻に制限 ===
+                final_l = final_l.head(50)
 
                 selection = st.dataframe(
                     final_l.style.map(lambda v: f'color: {get_wr_color(v)}; font-weight: bold', subset=['勝率'])
