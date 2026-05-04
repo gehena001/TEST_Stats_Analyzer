@@ -359,13 +359,15 @@ if uploaded_file:
     
                     fig_nation.update_traces(textposition='outside', texttemplate='%{text:,}')
                     st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False})
-                # フィルタ
+
+                    # --- フィルタセクション ---
                 st.divider()
-                st.subheader("📊 Tier / 国籍 / 艦種 フィルタ")
+                st.subheader("📊 艦艇フィルタ")
+                st.info("表示したい項目を下のボックスから選択してください（複数選択可）")
+
                 col1, col2, col3 = st.columns(3)
 
                 with col1:
-                    # Tierをローマ数字でソート（TIER_ORDERの順番通り）
                     all_tiers = sorted(
                         tab_df['Tier'].unique(), 
                         key=lambda x: (TIER_ORDER.index(x) if x in TIER_ORDER else 99)
@@ -373,21 +375,50 @@ if uploaded_file:
                     selected_tiers = st.multiselect(
                         "**Tier**", 
                         options=all_tiers, 
-                        default=all_tiers, 
+                        default=[],  # 最初は空にする
+                        placeholder="Tierを選択...", 
                         key=f"tier_{i}"
                     )
 
                 with col2:
-                    selected_nations = st.multiselect("**国籍**", options=sorted(tab_df['国籍'].unique()), default=sorted(tab_df['国籍'].unique()), key=f"nation_{i}")
-                with col3:
-                    selected_types = st.multiselect("**艦種**", options=sorted(tab_df['艦種'].unique()), default=sorted(tab_df['艦種'].unique()), key=f"type_{i}")
+                    selected_nations = st.multiselect(
+                        "**国籍**", 
+                        options=sorted(tab_df['国籍'].unique()), 
+                        default=[],  # 最初は空にする
+                        placeholder="国籍を選択...", 
+                        key=f"nation_{i}"
+                    )
 
-                # フィルタリング（selected_tiers は元の数字形式なのでそのまま使える）
-                filtered = tab_df[
-                    (tab_df['Tier'].isin(selected_tiers)) &
-                    (tab_df['国籍'].isin(selected_nations)) &
-                    (tab_df['艦種'].isin(selected_types))
-                ].copy()
+                with col3:
+                    selected_types = st.multiselect(
+                        "**艦種**", 
+                        options=sorted(tab_df['艦種'].unique()), 
+                        default=[],  # 最初は空にする
+                        placeholder="艦種を選択...", 
+                        key=f"type_{i}"
+                    )
+
+                # --- フィルタリングロジック ---
+                # 1. 最初に「何も選ばれていないか」をチェック
+                if not selected_tiers and not selected_nations and not selected_types:
+                    # 何も選ばれていない時は、空のDataFrameを作成（または案内を表示）
+                    filtered = tab_df.iloc[0:0].copy() 
+                    st.warning("Tier、国籍、艦種をそれぞれ選択すると、データが表示されます。")
+                else:
+                    # いずれかが選択されている場合のみフィルタをかける
+                    # 未選択の項目がある場合は、その項目については「全選択」として扱うロジック
+                    filtered = tab_df.copy()
+    
+                    if selected_tiers:
+                        filtered = filtered[filtered['Tier'].isin(selected_tiers)]
+                    if selected_nations:
+                        filtered = filtered[filtered['国籍'].isin(selected_nations)]
+                    if selected_types:
+                        filtered = filtered[filtered['艦種'].isin(selected_types)]
+
+                # --- データ表示 ---
+                if not filtered.empty:
+                    st.dataframe(filtered) # または st.table(filtered) など
 
                 st.divider()
                 st.subheader("🚢 艦艇データリスト")
