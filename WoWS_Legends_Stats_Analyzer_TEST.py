@@ -471,7 +471,7 @@ if uploaded_file:
                     .format({'戦闘数': '{:,.0f}', '勝率': '{:.2f}%', '平均ダメ': '{:,}', '平均基本EXP': '{:,}', 'キル/デス': '{:.2f}'}),
                     use_container_width=True, 
                     hide_index=True, 
-                    height=1791,                    # 50隻表示に最適な高さ
+                    height=1788,                    # 50隻表示に最適な高さ
                     selection_mode="single-row", 
                     on_select="rerun",
                     key=f"ship_list_{i}"
