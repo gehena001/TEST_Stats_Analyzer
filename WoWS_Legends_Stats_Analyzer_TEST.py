@@ -70,9 +70,29 @@ st.markdown("""
         color: #01579b !important;
         border-radius: 9999px !important;
     }
+
+    /* ==================== グラフ操作無効化（スマホ対応） ==================== */
+    [data-testid="stPlotlyChart"], [data-testid="stVegaLiteChart"] {
+        position: relative;
+    }
+    
+    [data-testid="stPlotlyChart"]::after,
+    [data-testid="stVegaLiteChart"]::after {
+        content: ""; 
+        position: absolute; 
+        top: 0; left: 0; 
+        width: 100%; height: 100%;
+        z-index: 10;
+        background: rgba(255,255,255,0);
+        pointer-events: none;           /* ← これがキー！タッチを通す */
+    }
+
+    /* モードバー（ツールバー）は非表示 */
+    .modebar { 
+        display: none !important; 
+    }
     </style>
     """, unsafe_allow_html=True)
-
 
 @st.cache_data
 def load_master_data():
