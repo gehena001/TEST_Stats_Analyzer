@@ -334,7 +334,7 @@ if uploaded_file:
                         'アメリカ': 'usa.png', 'イギリス': 'uk.png', 'イギリス連邦': 'commonwealth.png',
                         'イタリア': 'italy.png', 'オランダ': 'netherlands.png', 'ソ連': 'ussr.png',
                         'ドイツ': 'germany.png', 'パンアジア': 'pan_asia.png', 'パンアメリカ': 'pan_america.png',
-                        'フランス': 'france.png', 'ヨーロッパ': 'europe.png', '日本': 'japan.png',
+                        'フランス': 'france.png', 'ヨーロッパ': 'europe.png', '日本': 'flag_Japan_flat_1.png',
                         'その他': 'other.png'
                     }
                     
