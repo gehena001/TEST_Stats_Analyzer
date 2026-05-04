@@ -1,28 +1,47 @@
 id,name,tier
+PGSC104_Karlsruhe,Karlsruhe,III
+PFSC104_Duguay_Trouin,Duguay Trouin,III
+PGSB107_Gneisenau,Gneisenau,VI
+PRSB104_Gangut,Gangut,III
 PASB008_Colorado_1945,Colorado,VI
 PBSB002_Warspite_1941,Warspite,V
 PJSC007_Aoba_1943,Aoba,V
 PASC024_Phoenix_1917,Phoenix,III
+PFSB107_Lyon,Lyon,VI
 PJSB007_Kongo_1942,Kongo,IV
 PJSC005_Furutaka_1926,Furutaka,IV
+PFSC106_La_Galissonniere,La Galissonniere,V
+PGSB108_Bismarck,Bismarck,VII
+PGSC106_Nurnberg,Nurnberg,V
 PJSD024_Wakatake_1923,Wakatake,II
 PASC005_Omaha_1923,Omaha,IV
 PJSC502_Mikasa_1905,Mikasa,II
 PBSD107_Jervis,Jervis,VI
+PFSC105_Emile_Bertin,Emile Bertin,IV
 PASB018_Iowa_1944,Iowa,VII
 PASC004_St_Louis_1906,St.Louis,II
+PFSB105_Bretagne,Bretagne,IV
+PRSD505_Okhotnik_1917,Okhotnik,IV
 PBSC206_Devonshire,Devonshire,V
 PASB518_Massachusetts,Massachusetts,VII
+PGSB104_Kaiser,Kaiser,III
 PASB034_New_Mexico_1941,New_Mexico,V
 PASB006_New_York_1934,New_York,IV
 PASC012_Pensacola_1944,Pensacola,V
+PGSB105_Koenig,Koenig,IV
+PFSB106_Normandie,Normandie,V
+PGSB106_Bayern,Bayern,V
+PGSC105_Konigsberg,Konigsberg,IV
 PASC006_Atlanta_1942,Atlanta,VI
 PASB004_Arkansas_1912,Arkansas,III
 PJSC035_Chikuma_1912,Chikuma,I
 PJSD017_Kamikaze_1930,Kamikaze,IV
 PJSC026_Iwaki_1944,Iwaki,III
+PFSB104_Courbet,Courbet,III
 PBSB517_Nelson,Nelson,VI
+PFSB506_Dunkerque_1940,Dunkerque,V
 PBSD104_Wakeful,Wakeful,III
+PGSD105_T_22,T-22,IV
 PASC003_Albany_1898,Albany,I
 PJSC008_Myoko_1945,Myoko,VI
 PBSC205_Hawkins,Hawkins,III
@@ -33,89 +52,200 @@ PJSC015_Tatsuta_1919,Tenryu,II
 PJSB006_Fuso_1943,Fuso,V
 PJSC505_Yahagi,Yahagi,IV
 PJSB008_Ishizuchi_1921,Ishizuchi,III
+PGSD106_Ernst_Gaede,Gaede,V
 PJSD003_Isokaze_1917,Isokaze,III
+PFSB528_Champagne,Champagne,VII
+PRSC510_Stalingrad,Stalingrad,★
 PJSB018_Yamato_1944,Yamato,★
 PBSC107_Fiji,Fiji,VI
 PJSB509_Musashi,Musashi,VIII
 PBSB504_Agincourt,Agincourt,III
+PGSB210_Schlieffen,Schlieffen,★
+PISB108_Vittorio_Veneto,Vittorio Veneto,VII
+PGSD529_ZF_6,ZF-6,VII
 PBSC108_Edinburgh,Edinburgh,VII
 PASB739_Georgia_W,Georgia,VII
 PJSB010_Nagato_1944,Nagato,VI
 PASB509_Missouri,Missouri,VII
+PGSB207_Prinz_Heinrich,Heinrich,VI
 PBSB509_Marlborough,Marlborough,VIII
 PJSD706_Shinonome,Shinonome,VI
 PJSD518_Asashio,Asashio,VI
 PBSD506_Gallant,Gallant,V
 PBSC505_Exeter,Exeter,V
+PFSD508_Le_Terrible,Le Terrible,VI
+PFSC517_Algerie_W,Algerie W,VI
+PRSC538_Petr_Bagration,P.Bagration,VII
+PZSD506_Anshan,Anshan,V
+PZSC506_Huang_he,Huang he,V
 PJSB518_Hyuga,Hyuga,V
 PASB508_Alabama,Alabama,VII
+PFSB508_Gascogne,Gascogne,VII
+PVSB508_Atlantico,Atlantico,VII
+PFSC109_Saint_Louis,Saint Louis,VIII
+PGSC107_Yorck,Yorck,VI
 PJSB528_Hyuga_W,Hyuga W,V
 PJSC009_Mogami_1935,Mogami,VII
+PISB505_Giulio_Cesare,Giulio Cesare,IV
 PJSB707_Haruna,ARP Haruna,IV
+PRSB505_Oktyabrskaya_Revolutsiya,Oktyabrskaya Revolutsiya,IV
+PRSB105_Pyotr_Velikiy,Pyotr Velikiy,IV
 PBSB105_Iron_Duke,Iron Duke,IV
+PISB508_Roma,Roma,VII
+PRSC548_AL_Chapayev,AL Chapayev,VII
+PGSC718_Mainz_22,Mainz,VII
+PRSC509_Kronshtadt,Kronshtadt,VIII
+PWSD510_Friesland,Friesland,VII
+PISB105_Conte_di_Cavour,Cavour,IV
+PWSD106_Vasteras,Vasteras,V
 PBSD108_Lightning,Lightning,VII
+PFSB108_Richelieu,Richelieu,VII
+PGSB110_Grossdeutschland,Großer Kurfürst,★
 PASC206_Dallas,Dallas,V
+PFSC107_Algerie,Algerie,VI
+PGSB208_Zieten,Zieten,VII
+PGSC108_Hipper,Hipper,VII
+PRSC209_Riga,Riga,VII
+PGSB508_Odin,Odin,VII
+PFSC508_Bayard,Bayard,VII
 PBSB107_King_George_V,King George V,VI
+PFSC108_Charles_Martel,Charles Martel,VII
 PJSD105_Mutsuki,Mutuki,IV
 PJSD510_Hayate,Hayate,VIII
 PBSD109_Jutland,Jutland,VIII
+PISB107_Francesco_Caracciolo,Francesco Caracciolo,VI
+PWSD105_Visby,Visby,IV
+PWSD104_Klas_Horn,Klas Horn,III
+PRSC005_Azur_Avrora,AL Avrora,II
+PWSD108_Oland,Oland,VI
 PASD508_Kidd,Kidd,VI
+PWSD610_Smaland,Smaland,VIII
 PBSB106_Queen_Elizabeth,Queen Elizabeth,V
+PISC105_Raimondo_Montecuccoli,Montecuccoli,IV
 PBSB108_Monarch,Monarch,VII
+PISC106_Trento,Trento,V
+PGSD109_Z_46,Z-46,VIII
+PFSB110_France,Republique,VIII
+PGSB509_Pommern,Pommern,VIII
 PASC597_Nueve_de_Julio_1951,Rio de janeiro,IV
+PISB519_Giuseppe_Verdi,Giuseppe Verdi,VIII
+PGSD528_Elbing_1944,Elbing,VIII
 PJSD012_Shimakaze_1943,Shimakaze,★
+PISB509_Marco_Polo,Marco Polo,VIII
 PASD510_Somers,Somres,VII
 PBSB507_Hood,Hood,VI
 PBSB557_Nelson_W,Nelson W,VI
 PASB528_AL_Iowa,AL New Jersey,VII
 PBSA518_Ark_Royal,Ark Royal,V
+PGSA104_Rhein,Rhein,III
 PASB707_California,California,V
 PJSC510_Azumaya,Azuma,VII
+PGSD518_Z_35,Z-35,VI
 PBSC510_Plymouth,Plymouth,VII
+PISC107_Zara,Zara,VI
 PBSB527_Duke_of_York,Duke of York,VI
+PGSC507_Munchen,Munchen,VI
+PWSD107_Skane,Skane,VI
 PASC020_Des_Moines_1948,Des_Moines,★
 PASC587_AL_Baltimore,AL Baltimore,VII
 PASB207_Connecticut,Connecticut,VI
 PASB510_Ohio,Ohio,★
+PISC109_Brindisi,Brindisi,VIII
+PUSC510_Brisbane,Brisbane,★
+PISC607_Gorizia,Gorizia,V
 PBSB505_AL_QE,AL Queen Elizabeth,V
+PGSD506_T_61,T-61,V
 PJSB516_AL_Fusou,AL Fuso,V
+PRSB518_Lenin,Lenin,VII
 PBSD508_Pirate_Le_Fantasque,Caprice,VII
 PASC503_Charleston,Charleston,II
+PZSD508_LoYang,LoYang,VII
 PBSC207_Surrey,Surrey,VI
 PJSB001_Kawachi_1912,Kawachi,III
+PISC104_Alberto_da_Giussano,Giussano,III
 PASA004_Langley_1929,Langley,III
+PISB109_Lepanto,Lepanto,VIII
+PGSC506_Admiral_Graf_Spee,Graf Spee,V
+PFSC506_De_Grasse,De Grasse,V
+PRSC506_Molotov_1943,Molotov,V
+PISC516_DucadAosta_B,DucadAosta B,V
+PISC506_DucadAosta,DucadAosta,V
+PRSC606_Admiral_Makarov,Admiral Makarov,V
+PISB106_Andrea_Doria,Andrea Doria,V
+PRSC104_Svetlana,Svetlana,III
 PBSB103_Bellerophon,Bellerophon,III
+PFSD102_Enseigne_Gabolde,Enseigne Gabolde,II
 PASB208_Nebraska,Nebraska,VII
 PBSC104_Danae,Danae,III
 PBSC105_Emerald,Emerald,IV
 PASB110_Vermont,Vermont,★
+PZSD510_Lushun,Lushun,VIII
+PWSD109_Ostergotland,Ostergotland,VII
 PASC518_Anchorage,Anchorage,VII
+PRSB901_Sovetskaya_Rossiya_AL,AL Sov. Rossiya,VIII
 PASC109_Buffalo,Buffalo,VIII
 PASB118_Maine,Maine,VIII
+PGSD108_Z_23,Z-23,VII
+PGSC508_Prinz_Eugen,Prinz Eugen,VII
+PFSB548_Pirate_Jean_Bart,La Foudre,VII
 PASC046_Marblehead_Megadeth,Rattlehead,IV
+PFSB518_Jean_Bart,Jean Bart,VII
 PJSC517_Maya,Maya,VI
 PJSC209_Takahashi,Takahashi,VIII
 PJSC206_Gokase,Gokase,V
 PJSC205_Agano,Agano,IV
+PFSC208_Cherbourg,Cherbourg,VII
 PJSB963_Musashi_ARP,ARP Musashi,VIII
+PWSD110_Halland,Halland,★
+PUSD510_Vampire_2,Vampire 2,★
+PWSD210_Gdansk,Gdansk,★
+PGSD599_Z_44,Z-44,VIII
 PJSC012_Ibuki_1944,Ibuki,VIII
+PRSC578_Dmitry_Pozharsky,Dmitry Pozharsky,VII
+PISC108_Amalfi,Amalfi,VII
 PJSD507_Yudachi,Yudachi,VII
 PASB017_Montana_1945,Montana,★
 PASB108_Kansas,Kansas,VII
 PBSB205_Tiger,Tiger,IV
+PWSD599_Ostergotland_W,Ostergotland W,VII
+PGSD596_Karl_von_Schonberg,Karl von Schönberg,VII
 PBSC516_London,London,V
 PBSC528_Belfast_1943,Belfast'43,VII
 PASB538_Constellation,Constellation,VII
 PASB729_Georgia,Georgia,VII
 PASC596_Indianapolis_B,Indianapolis B,VI
 PASB012_North_Carolina_1945,North_Carolina,VI
+PRSB106_Izmail,Izmail,V
+PHSC508_De_Zeven_Provincien,De Zeven Provincien,VII
 PASD709_Black,Black,VII
 PASC707_Flint,Flint,VI
+PZSD107_Gadjah_Mada,Gadjah Mada,VI
+PZSC107_Chumphon,Chumphon,VI
+PWSD908_Oland_Space,Achilles,VI
+PWSD205_Muavenet,Muavenet,IV
+PWSD206_Stord,Stord,V
+PFSD506_Aigle,Aigle,V
+PRSB508_Poltava,Poltava,VI
+PRSA508_Chkalov,Chkalov,VII
+PVSD506_Jurua,Jurua,V
+PWSD501_Blyskawica,Blyskawica,VI
 PJSA006_Zuiho_1944,Zuiho,V
 PBSC506_Exeter_B,Exeter B,V
+PRSB101_Nikolay_I_Rasputin,Rasputin,V
+PFSB599_Richelieu_AL,AL Richelieu,VII
+PRSB109_Sovetsky_Soyuz,Sovetsky Soyuz,VIII
 PJSC717_Yellow_Dragon,Yellow Dragon,VI
+PFSD526_Ernst_Gaede_Pirate,Le Glorieux,V
+PWSD519_Jager,Jager,VII
 PASC519_Tulsa,Tulsa,VIII
+PFSD108_Le_Fantasque,Le Fantasque,VII
+PWSD209_Lambros_Katsonis,L.Katsonis,VIII
+PGSD207_Z_31,Z-31,VI
 PASC538_Rochester,Rochester,VII
+PISB510_Ruggiero_di_Lauria,Ruggiero di Lauria,★
+PWSD208_Split,Split,VII
+PGSC517_Weimar,Weimar,VII
+PGSC110_Hindenburg,Hindenburg,★
 PBSC810_Defence,Defence,★
 PASC017_Baltimore_1944,Baltimore,VII
 PASB599_Constellation_W,Constellation,VII
@@ -126,62 +256,148 @@ PBSC538_Hampshire,Hampshire,VII
 PBSC511_Plymouth_HOTROD,Perfect 10,VII
 PBSB109_Lion,Lion,VII
 PBSB508_Vanguard,Vanguard,VII
+PFSC507_Charles_Martel_prem_HW,Charlemagne(仮),VI
+PGSC528_Schill,Schill,VII
+PGSC509_Siegfried,Siegfried,VII
+PGSB529_Anhalt,Anhalt,VII
+PGSB502_Tirpiz_1942_Nonomi,BA Tirpiz,VII
+PGSB717_Scharnhorst_1943,Scharnhorst '43,VII
+PGSB002_Tirpiz_1942,Tirpiz,VII
+PGSA508_Graf_Zeppelin,Graf Zeppelin,VII
+PRSC558_Kutuzov_W,Kutuzov W,VII
+PWSC598_Numancia_Clone,La Perla Azul,VII
 PASD518_Benson,Benson,VI
 PASD029_Sims_1941,Sims,VI
 PBSC507_Belfast_1959,Belfast,VI
+PFSD516_Guepard_W,Guepard W,V
 PASB730_Wisconsin,Wisconsin,VIII
 PASB590_Montana_1945_BA_Hoshino,Montana_1945_BA,★
 PBSC110_Minotaur,Minotaur,★
 PASD014_Leader_1919,Nicholas,IV
+PWSD207_Grom,Grom,VI
 PBSB204_Queen_Mary,Queen Mary,IV
+PFSD105_Jaguar,Jaguar,IV
+PFSD605_Cyclone_event,Cyclone,IV
+PRSC215_Kotovsky,Kotovsky,IV
+PRSC505_KrasniKrym,KrasniKrym,IV
+PRSC515_Mikoyan,Mikoyan,IV
+PZSD105_Jian_Wei,Jianwei,IV
+PFSB558_Picardie,Picardie,VII
+PRSB509_Navarin,Navarin,VIII
+PZSC108_Harbin,Harbin,VII
+PZSC109_Sejong,Sejong,VIII
+PHSC105_Celebes,Celebes,IV
 PASC308_Montpelier,Montpelier,VII
+PFSB538_Flandre,Flandre,VII
 PASC014_New_Orlean_1944,New Orlans,VI
 PBSB537_Collingwood,Collingwood,VI
+PWSD508_Orkan,Orkan,VI
 PBSC608_Klingon_Fiji,I.K.S. Bortas,VI
+PRSD110_Pr_24_Khabarovsk,Khabarovsk,★
+PISC510_Napoli,Napoli,★
 PBSC103_Caledon,Caledon,II
+PGSD107_Leberecht_Maass,Maass,VI
+PGSB109_Friedrich_der_Grosse,Friedrich Der Grosse,VIII
 PJSC727_Blue_Dragon,Blue Dragon,VI
+PZSC106_Rahmat,Rahmat,V
+PUSC516_Mysore,Mysore,V
 PASB209_Delaware,Delaware,VIII
 PBSC109_Neptune,Neptune,VIII
+PISC519_Michelangelo, Michelangelo,VIII
 PJSB506_Mutsu,Mutsu,V
+PRSC508_Kutuzov_1952,Kutuzov,VII
 PBSB110_Conqueror,Conqueror,★
+PFSB510_Bourgogne,Bourgogne,★
 PASB106_Tennessee,Tennessee,V
+PFSB507_Strasbourg,Strasbourg,VI
+PRSB107_Sinop,Sinop,VI
 PASC208_Cleveland,Cleveland,VII
+PGSC510_Admiral_Graf_Spee_B,Graf Spee B,V
 PASC510_Alaska,Alaska,★
+PGSB506_Prinz_Eithel_Friedrich,Prinz Eitel Friedrich,V
 PBSD102_Medea,Medea,II
 PASC207_Helena,Helena,VI
+PWSD506_Blyskawica_B,Blyskawica B,VI
+PGSD110_Z_52,Z-52,★
+PZSD518_Fen_Yang,Fen Yang,VI
 PBSD503_Campbeltown_1941,Campbeltown,II
 PASB507_West_Virginia,West Virginia,VI
+PGSB205_Derfflinger,Derfflinger,IV
 PJSB013_Amagi_1942,Amagi,VII
+PGSB507_Scharnhorst,Scharnhorst,VI
 PBSC106_Leander,Leander,V
 PJSC520_Yoshino,Yoshino,★
 PASC016_Worcester_1948,Worcester,★
+PFSD110_Kleber,Kleber,★
 PASB105_Nevada,Nevada,IV
 PJSB529_Iwami,Iwami,VIII
 PBSD110_Daring,Daring,★
 PASB506_Arizona_1941,Arizona,VI
+PRSD002_Gremyashchy_1942_clone,Gremyashchy,IV
+PZSC102_Chester,Chester,VI
+PZSD103_Phra_Ruang,Phra Ruang,II
+PZSD104_Shen_Yang,Shenyang,VII
+PRSC105_Kirov,Kirov,IV
+PZSD106_Fu_Shun,Fushun,V
 PASC045_Marblehead_1924_clone,Marblehead,IV
 PASD506_Monaghan,Monaghan,V
+PGSB206_Mackensen,Mackensen,V
+PFSD509_Le_Terrible_B,Le Terrible B,VI
 PASA010_Ranger_1944,Ranger,V
+PRSC528_Ochakov,Ochakov,VII
 PASC710_Salem,Salem,VIII
+PISD509_Paolo_Emilio,Paolo Emilio,VII
+PZSD108_Hsien_Yang,Hsienyang,VII
+PRSC208_Tallin,Tallin,VI
+PZSD109_Chung_Mu,Chung Mu,VIII
+PISC102_Nino_Bixio,Nino Bixio,I
 PASA528_Saipan,Saipan,VII
+PRSB108_Vladivostok,Vladivostok,VII
 PASD509_Benham,Benham,VI
+PRSC216_Gorky,Gorky,V
+PISB110_Cristoforo_Colombo,Cristoforo Colombo,★
+PGSC519_Aegir,Aegir,VIII
+PRSB528_Borodino,Borodino,VII
 PASA915_Midway_1945,Midway,★
 PJSA917_Hakuryu_1942,Hakuryu,★
+PISC103_Taranto,Taranto,V
 PBSB104_Orion,Orion,IV
 PASD013_Gearing_1945,Gearing,★
+PFSC510_Colbert,Colbert,★
 PJSB021_Izumo_1938,Izumo,VIII
 PJSA009_Ryujo_1933,Ryujo,V
+PISB104_Dante_Alighieri,Dante Alighieri,III
+PFSB566_Dunkerque_B,Dunkerque B,V
+PGSD102_V_25,V-25,II
+PZSC105_Chung_King,Chungking,IV
 PASC209_Seattle,Seattle,VIII
+PFSB109_Alsace,Alsace,VIII
+PISD105_Maestrale,Maestrale,IV
+PISD106_Aviere,Aviere,V
 PASB109_Minnesota,Minnesota,VIII
+PISC110_Venezia,Venezia,★
+PGSC529_Admiral_Schroder,Schroder,VIII
+PWSD509_Velos,Velos,VIII
+PWSB509_Karl_XIV_Johan,Karl XIV Johan,VIII
 PJSC034_Zao_1944,Zao,★
 PASC577_Wichita_22,Wichita,VII
 PJSC038_Atago_1944,Atago,VII
 PJSA518_Kaga,Kaga,VII
+PRSC106_Pr_94_Budeny,Budyonny,VI
+PGSD508_Z_39,Z-39,VI
 PASC528_Congress,Congress,VII
 PASC548_San_Diego,San Diego,VII
 PJSB508_Kii,Kii,VII
+PISD506_Leone,Leone,V
+PGSB518_Brandenburg,Brandenburg,VII
+PGSB310_Preussen,Preussen,★
 PJSB519_Hizen,Hizen,VIII
+PFSC110_Henri_IV,Henri IV,★
+PRSC310_Petropavlovsk,Petropavlovsk,VIII
+PISC511_Napoli_B,Napoli B,★
 PJSC508_Suzuya,Suzuya,VII
 PASB536_North_Carolina_Leviafan,North_Carolina,VI
+PFSD107_Vauquelin,Vauquelin,VI
+PFSC509_Carnot,Carnot,VIII
 PASA508_Enterprise,Enterprise,VII
 PBSB112_Temeraire,Temeraire,VIII
