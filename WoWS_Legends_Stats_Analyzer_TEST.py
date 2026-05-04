@@ -327,87 +327,38 @@ if uploaded_file:
                 # --- 国籍分布 (d2) ---
                 with d2:
                     st.caption("🌍 国籍分布")
-                    nation_counts = tab_df.groupby('国籍')[C['battles']].sum().sort_values(ascending=False)
-                    
-                    # 国籍アイコン用の辞書
-                    nation_icons = {
-                        'アメリカ': 'usa.png', 'イギリス': 'uk.png', 'イギリス連邦': 'commonwealth.png',
-                        'イタリア': 'italy.png', 'オランダ': 'netherlands.png', 'ソ連': 'ussr.png',
-                        'ドイツ': 'germany.png', 'パンアジア': 'pan_asia.png', 'パンアメリカ': 'pan_america.png',
-                        'フランス': 'france.png', 'ヨーロッパ': 'europe.png', '日本': 'flag_Japan_flat_1.png',
-                        'その他': 'other.png'
-                    }
-                    
+                    nation_counts = tab_df.groupby('国籍')[C['battles']].sum()
+    
                     fig_nation = px.bar(
                         x=nation_counts.index,
                         y=nation_counts.values,
-                        height=430,                    # 高さを少し増やして余裕を持たせる
+                        height=350, 
                         text=nation_counts.values,
                         color_discrete_sequence=['#1f77b4']
                     )
-                    
+    
                     fig_nation.update_layout(
                         xaxis_title=None, 
                         yaxis_title=None, 
                         showlegend=False, 
-                        bargap=0.25,
-                        margin=dict(l=10, r=10, t=30, b=90),   # 下余白を増やす
+                        bargap=0.3,
+                        margin=dict(l=10, r=10, t=30, b=0),
                         xaxis=dict(
-                            fixedrange=True,
-                            showticklabels=False,
+                            fixedrange=True, 
+                            tickangle=0,
+                            # --- ここで文字サイズを調整 ---
+                            tickfont=dict(
+                                size=10  # デフォルトより小さめに設定（標準は12前後）
+                            )
                         ),
                         yaxis=dict(
-                            fixedrange=True,
-                            range=[0, max(nation_counts.values) * 1.25]
+                            fixedrange=True, 
+                            range=[0, max(nation_counts.values) * 1.2 if max(nation_counts.values) > 0 else 10]
                         )
                     )
-                    
+    
                     fig_nation.update_traces(textposition='outside', texttemplate='%{text:,}')
                     st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False})
-                    
-                    # ==================== 国籍アイコン / ラベル ====================
-                    cols = st.columns(len(nation_counts), gap="small")
-                    
-                    for col, nation in zip(cols, nation_counts.index):
-                        with col:
-                            icon_file = nation_icons.get(nation)
-                            if icon_file:
-                                try:
-                                    # 画像がある場合は表示（白背景で綺麗に）
-                                    st.markdown(f"""
-                                        <div style="text-align:center; padding: 6px 0 2px 0;">
-                                            <img src="flags/{icon_file}" width="44" 
-                                                 style="background-color:white; padding:4px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
-                                        </div>
-                                    """, unsafe_allow_html=True)
-                                except:
-                                    # 画像読み込み失敗時 → 絵文字＋国名
-                                    emoji_dict = {
-                                        '日本': '🇯🇵', 'アメリカ': '🇺🇸', 'イギリス': '🇬🇧', 'イギリス連邦': '🇬🇧',
-                                        'フランス': '🇫🇷', 'ドイツ': '🇩🇪', 'イタリア': '🇮🇹', 'ソ連': '☭',
-                                        'オランダ': '🇳🇱', 'ヨーロッパ': '🇪🇺', 'パンアジア': '🌏', 
-                                        'パンアメリカ': '🌎', 'その他': '🌍'
-                                    }
-                                    emoji = emoji_dict.get(nation, '🏴')
-                                    st.markdown(f"""
-                                        <div style="text-align:center; font-size:1.9rem; padding:4px 0 2px 0;">
-                                            {emoji}
-                                        </div>
-                                    """, unsafe_allow_html=True)
-                            else:
-                                # 辞書にない国はテキストのみ
-                                st.markdown(f"""
-                                    <div style="text-align:center; font-size:0.82rem; font-weight:bold; padding-top:8px;">
-                                        {nation}
-                                    </div>
-                                """, unsafe_allow_html=True)
-                            
-                            # 国名は常に小さく表示（アイコンの下）
-                            st.markdown(f"""
-                                <div style="text-align:center; font-size:0.78rem; line-height:1.1;">
-                                    {nation}
-                                </div>
-                            """, unsafe_allow_html=True)
                 # フィルタ
                 st.divider()
                 st.subheader("📊 Tier / 国籍 / 艦種 フィルタ")
