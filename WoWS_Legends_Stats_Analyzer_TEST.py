@@ -132,7 +132,6 @@ st.markdown("""
     .stMultiSelect label {
         font-size: 0.95rem !important;
     }
-    
     </style>
     """, unsafe_allow_html=True)
 
@@ -462,11 +461,10 @@ if uploaded_file:
                 final_l = final_l.sort_values('戦闘数', ascending=False)
 
                 selection = st.dataframe(
-                    final_l,   # スタイルを外してシンプルに
-                    use_container_width=True, 
-                    hide_index=True, 
-                    height=400,
-                    key=f"simple_{i}"
+                    final_l.style.map(lambda v: f'color: {get_wr_color(v)}; font-weight: bold', subset=['勝率'])
+                    .format({'戦闘数': '{:,.0f}', '勝率': '{:.2f}%', '平均ダメ': '{:,}', '平均基本EXP': '{:,}', 'キル/デス': '{:.2f}'}),
+                    use_container_width=True, hide_index=True, height=400,
+                    selection_mode="single-row", on_select="rerun"
                 )
 
                 # 詳細プロファイル
