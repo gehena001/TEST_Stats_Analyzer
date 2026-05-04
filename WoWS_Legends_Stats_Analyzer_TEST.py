@@ -334,14 +334,14 @@ if uploaded_file:
                         'アメリカ': 'usa.png', 'イギリス': 'uk.png', 'イギリス連邦': 'commonwealth.png',
                         'イタリア': 'italy.png', 'オランダ': 'netherlands.png', 'ソ連': 'ussr.png',
                         'ドイツ': 'germany.png', 'パンアジア': 'pan_asia.png', 'パンアメリカ': 'pan_america.png',
-                        'フランス': 'france.png', 'ヨーロッパ': 'europe.png', '日本': 'flag_Japan_flat_1.png',
+                        'フランス': 'france.png', 'ヨーロッパ': 'europe.png', '日本': 'japan.png',
                         'その他': 'other.png'
                     }
                     
                     fig_nation = px.bar(
                         x=nation_counts.index,
                         y=nation_counts.values,
-                        height=400,                    # 少し小さめに調整
+                        height=430,                    # 高さを少し増やして余裕を持たせる
                         text=nation_counts.values,
                         color_discrete_sequence=['#1f77b4']
                     )
@@ -351,7 +351,7 @@ if uploaded_file:
                         yaxis_title=None, 
                         showlegend=False, 
                         bargap=0.25,
-                        margin=dict(l=10, r=10, t=30, b=40),   # 下余白をさらに詰める
+                        margin=dict(l=10, r=10, t=30, b=90),   # 下余白を増やす
                         xaxis=dict(
                             fixedrange=True,
                             showticklabels=False,
@@ -365,20 +365,25 @@ if uploaded_file:
                     fig_nation.update_traces(textposition='outside', texttemplate='%{text:,}')
                     st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False})
                     
-                    # ==================== 国籍ラベル ====================
-                    cols = st.columns(len(nation_counts), gap="small")   # gapを小さく
+                    # ==================== 国籍アイコン / ラベル ====================
+                    cols = st.columns(len(nation_counts), gap="small")
                     
                     for col, nation in zip(cols, nation_counts.index):
                         with col:
                             icon_file = nation_icons.get(nation)
                             if icon_file:
                                 try:
-                                    st.image(f"flags/{icon_file}", width=42)   # 少し小さめに
+                                    # 背景を白くして重なり防止 + 中央寄せ
+                                    st.markdown(f"""
+                                        <div style="text-align:center; padding: 4px 0;">
+                                            <img src="flags/{icon_file}" width="42" style="background-color:white; padding:3px; border-radius:6px;">
+                                        </div>
+                                    """, unsafe_allow_html=True)
                                 except:
-                                    st.markdown(f"<div style='text-align:center; font-size:0.85rem; font-weight:bold;'>{nation}</div>", 
+                                    st.markdown(f"<div style='text-align:center; font-size:0.82rem; font-weight:bold; padding-top:4px;'>{nation}</div>", 
                                               unsafe_allow_html=True)
                             else:
-                                st.markdown(f"<div style='text-align:center; font-size:0.85rem; font-weight:bold;'>{nation}</div>", 
+                                st.markdown(f"<div style='text-align:center; font-size:0.82rem; font-weight:bold; padding-top:4px;'>{nation}</div>", 
                                           unsafe_allow_html=True)
 
                 # フィルタ
