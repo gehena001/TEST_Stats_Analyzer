@@ -328,37 +328,68 @@ if uploaded_file:
                 with d2:
                     st.caption("🌍 国籍分布")
                     nation_counts = tab_df.groupby('国籍')[C['battles']].sum()
-    
+                    
+                    # 国籍アイコン用の辞書（ファイル名は実際のものに合わせてください）
+                    nation_icons = {
+                        'ドイツ': 'germany.png',
+                        'イタリア': 'italy.png',
+                        'アメリカ': 'usa.png',
+                        'イギリス': 'uk.png',
+                        'ソ連': 'ussr.png',
+                        'オランダ': 'netherlands.png',
+                        'フランス': 'france.png',
+                        'パンアジア': 'pan_asia.png',
+                        'スペイン': 'spain.png',
+                        '日本': 'japan.png',
+                        'ヨーロッパ': 'europe.png',
+                        'イギリス連邦': 'commonwealth.png',
+                        'パンアメリカ': 'pan_america.png',
+                        'その他': 'other.png'
+                    }
+                    
+                    # 使用する国籍のみ抽出
+                    used_nations = nation_counts.index.tolist()
+                    
                     fig_nation = px.bar(
                         x=nation_counts.index,
                         y=nation_counts.values,
-                        height=350, 
+                        height=420,   # 高さを増やす
                         text=nation_counts.values,
                         color_discrete_sequence=['#1f77b4']
                     )
-    
+                    
                     fig_nation.update_layout(
                         xaxis_title=None, 
                         yaxis_title=None, 
                         showlegend=False, 
-                        bargap=0.3,
-                        margin=dict(l=10, r=10, t=30, b=0),
+                        bargap=0.25,
+                        margin=dict(l=10, r=10, t=30, b=80),  # 下部余白を増やす
                         xaxis=dict(
-                            fixedrange=True, 
-                            tickangle=0,
-                            # --- ここで文字サイズを調整 ---
-                            tickfont=dict(
-                                size=10  # デフォルトより小さめに設定（標準は12前後）
-                            )
+                            fixedrange=True,
+                            showticklabels=False,          # ← 国籍名を非表示
+                            tickangle=0
                         ),
                         yaxis=dict(
-                            fixedrange=True, 
-                            range=[0, max(nation_counts.values) * 1.2 if max(nation_counts.values) > 0 else 10]
+                            fixedrange=True,
+                            range=[0, max(nation_counts.values) * 1.25 if max(nation_counts.values) > 0 else 10]
                         )
                     )
-    
+                    
                     fig_nation.update_traces(textposition='outside', texttemplate='%{text:,}')
                     st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False})
+                    
+                    # === アイコン表示部分 ===
+                    st.markdown("**国籍**")
+                    icon_cols = st.columns(len(used_nations))
+                    
+                    for col, nation in zip(icon_cols, used_nations):
+                        icon_path = nation_icons.get(nation, 'other.png')
+                        with col:
+                            try:
+                                st.image(f"flags/{icon_path}", width=45)  # または "flags/" フォルダ
+                                st.caption(nation, help=nation)
+                            except:
+                                st.caption(nation)  # 画像がない場合はテキスト表示
 
                 # フィルタ
                 st.divider()
