@@ -133,12 +133,6 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
     
-    /* データエディタ用 最終スクロール対策 */
-    [data-testid="stDataEditor"] {
-        -webkit-overflow-scrolling: touch !important;
-        overscroll-behavior: contain !important;
-        touch-action: pan-y !important;
-    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -467,16 +461,12 @@ if uploaded_file:
                 final_l['平均基本EXP'] = (final_l['平均基本EXP'] / final_l['戦闘数']).astype(int)
                 final_l = final_l.sort_values('戦闘数', ascending=False)
 
-                selection = st.data_editor(
-                    final_l.style.map(lambda v: f'color: {get_wr_color(v)}; font-weight: bold', subset=['勝率'])
-                    .format({'戦闘数': '{:,.0f}', '勝率': '{:.2f}%', '平均ダメ': '{:,}', '平均基本EXP': '{:,}', 'キル/デス': '{:.2f}'}),
+                selection = st.dataframe(
+                    final_l,   # スタイルを外してシンプルに
                     use_container_width=True, 
                     hide_index=True, 
-                    height=460,                    # ここは480前後で調整
-                    disabled=True,                 # 編集不可
-                    selection_mode="single-row", 
-                    on_select="rerun",
-                    key=f"ship_editor_{i}"
+                    height=400,
+                    key=f"simple_{i}"
                 )
 
                 # 詳細プロファイル
