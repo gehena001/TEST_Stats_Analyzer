@@ -133,23 +133,11 @@ st.markdown("""
         font-size: 0.95rem !important;
     }
     
-    /* ==================== 艦艇データリスト スクロール競合対策 ==================== */
-    [data-testid="stDataFrame"], [data-testid="stDataEditor"] {
+    /* データエディタ用 最終スクロール対策 */
+    [data-testid="stDataEditor"] {
         -webkit-overflow-scrolling: touch !important;
         overscroll-behavior: contain !important;
-        overscroll-behavior-y: contain !important;
-        touch-action: pan-y !important;           /* 縦スクロールのみ許可 */
-    }
-    
-    [data-testid="stDataFrame"] div[role="grid"],
-    [data-testid="stDataEditor"] div[role="grid"] {
-        overscroll-behavior-y: contain !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-    
-    /* ページ全体のスクロールを優先させる */
-    .main .stDataFrame, .main .stDataEditor {
-        overscroll-behavior-y: none !important;
+        touch-action: pan-y !important;
     }
     </style>
     """, unsafe_allow_html=True)
