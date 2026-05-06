@@ -334,6 +334,7 @@ if uploaded_file:
                         fig_type, 
                         use_container_width=True, 
                         config={'displayModeBar': False} # ここで非表示に設定
+                        key=f"type_dist_{i}"
                     )
 
                 with cr:
@@ -372,7 +373,7 @@ if uploaded_file:
                         yaxis=dict(fixedrange=True, range=[0, max(tier_counts.values) * 1.2 if max(tier_counts.values) > 0 else 10])
                     )
                     fig_tier.update_traces(textposition='outside', texttemplate='%{text:,}')
-                    st.plotly_chart(fig_tier, use_container_width=True, config={'displayModeBar': False})
+                    st.plotly_chart(fig_tier, use_container_width=True, config={'displayModeBar': False},key=f"tier_dist_{i}")
 
                 # --- 国籍分布 (d2) ---
                 with d2:
@@ -408,7 +409,7 @@ if uploaded_file:
                     )
     
                     fig_nation.update_traces(textposition='outside', texttemplate='%{text:,}')
-                    st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False})
+                    st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False},key=f"nation_dist_{i}")
 
                 # フィルタ
                 st.divider()
