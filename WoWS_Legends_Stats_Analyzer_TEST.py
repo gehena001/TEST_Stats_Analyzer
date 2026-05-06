@@ -165,11 +165,18 @@ MODE_MAP = {
 }
 def get_target_ids(sel_p, mode_map):
     """親モードから対象モードIDを取得"""
-    # 「総合」データが直接存在するモード
+    # 「総合」データが直接存在するモード（CSVに単独の総合データがある場合）
     special_comprehensive = {
-        "ランダム": 1,   # キー1 = ランダム[総合]
+        "ランダム": 1,      # ランダム[総合]
+        "アーケード": 23,   # アーケード[総合] ← 追加
         # 将来他のモードで総合キーがある場合はここに追加
     }
+    
+    if sel_p in special_comprehensive:
+        return [special_comprehensive[sel_p]]
+    
+    # その他のモードは子モード（ソロ・2人・3人など）をすべて合計
+    return [k for k, v in mode_map.items() if v.startswith(sel_p)]
     
     if sel_p in special_comprehensive:
         return [special_comprehensive[sel_p]]
