@@ -282,6 +282,11 @@ if uploaded_file:
                                  if v == f"{sel_p}{sub_name}" or v == f"{sel_p}[{sub_name}]"]
         
                 tab_df = user_df[s_mode_series.isin(target_ids)].copy()
+
+                if len(tab_df) == 0:
+                    st.info("📭 このモードの戦績データはまだありません。")
+                    st.caption("CSVファイルに該当するデータが含まれていない可能性があります。")
+                    continue
                 cl, cm, cr = st.columns([1.2, 1, 1.3])
                 with cl:
                     st.subheader("最多プレイ艦艇")
