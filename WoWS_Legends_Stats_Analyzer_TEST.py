@@ -333,7 +333,7 @@ if uploaded_file:
                     st.plotly_chart(
                         fig_type, 
                         use_container_width=True, 
-                        config={'displayModeBar': False} # ここで非表示に設定
+                        config={'displayModeBar': False}, # ここで非表示に設定
                         key=f"type_dist_{i}"
                     )
 
