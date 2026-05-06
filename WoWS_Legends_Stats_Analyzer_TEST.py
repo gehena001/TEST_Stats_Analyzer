@@ -383,38 +383,44 @@ if uploaded_file:
                 # --- 国籍分布 (d2) ---
                 with d2:
                     st.caption("🌍 国籍分布")
+                    
+                    # 全国籍の固定リスト（NATION_MAPに基づく）
+                    all_nations = ['US', 'UK', 'CW', 'JP', 'RU', 'FR', 'IT', 
+                                   'DE', 'NL', 'PA', 'PM', 'EU', 'その他']  # KM→DEなどに調整
+                    
+                    # データ集計
                     nation_counts = tab_df.groupby('国籍')[C['battles']].sum()
-    
+                    
+                    # 全ての国籍を必ず含めて0で埋める
+                    nation_counts = nation_counts.reindex(all_nations).fillna(0)
+                    
                     fig_nation = px.bar(
                         x=nation_counts.index,
                         y=nation_counts.values,
-                        height=320, 
-                        text=nation_counts.values,
+                        height=360,
+                        text=nation_counts.values.astype(int),
                         color_discrete_sequence=['#1f77b4']
                     )
-    
+                    
                     fig_nation.update_layout(
                         xaxis_title=None, 
                         yaxis_title=None, 
                         showlegend=False, 
                         bargap=0.3,
-                        margin=dict(l=10, r=10, t=30, b=0),
+                        margin=dict(l=10, r=10, t=30, b=80),
                         xaxis=dict(
-                            fixedrange=True, 
-                            tickangle=0,
-                            # --- ここで文字サイズを調整 ---
-                            tickfont=dict(
-                                size=10  # デフォルトより小さめに設定（標準は12前後）
-                            )
+                            fixedrange=True,
+                            tickangle=45,
+                            tickfont=dict(size=11)
                         ),
                         yaxis=dict(
-                            fixedrange=True, 
-                            range=[0, max(nation_counts.values) * 1.2 if max(nation_counts.values) > 0 else 10]
+                            fixedrange=True,
+                            range=[0, max(nation_counts.values) * 1.2 if max(nation_counts.values) > 0 else 5]
                         )
                     )
-    
+                    
                     fig_nation.update_traces(textposition='outside', texttemplate='%{text:,}')
-                    st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False},key=f"nation_dist_{i}")
+                    st.plotly_chart(fig_nation, use_container_width=True, config={'displayModeBar': False})
 
                 # フィルタ
                 st.divider()
